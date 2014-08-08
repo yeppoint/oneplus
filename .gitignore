@@ -39,4 +39,5 @@
 # Linux temp file
 *.*~
 
-
+# .idea
+.idea/
