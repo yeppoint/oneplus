@@ -51,7 +51,7 @@ abstract class Controller {
 
 	protected function hasAction($child, $args = array()) {
 		$action = new Action($child, $args);
-
+        echo $child."<br>";
 		if (file_exists($action->getFile())) {
 			require_once($action->getFile());
 
