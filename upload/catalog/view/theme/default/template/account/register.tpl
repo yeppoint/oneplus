@@ -34,6 +34,7 @@
                 <li><span class="input-radio input-radio-checked" id="tab-email"></span><label for="tab-email">填写电子邮箱</label></li>
             </ul>
             <ul class="regform o-mt-20 o-mb-100">
+                <li> <p ><em class="validate_tip " data-flag="incorrect" style="display: inline-block;"><?php if(isset($error)){echo $error;} ?></em></p></li>
                 <li class="with-phone" style="display: none;"><label><em>＊</em>手　机　号：</label><input name="mobilePhone" type="text" value="" placeholder="手机号码" id="mobilePhone" rules="mobilePhone"></li>
                 <li class="with-phone" style="display: none;"><label><em>＊</em>验　证　码：</label><input name="imgValidCodePhone" type="text" value="" placeholder="图片验证码" id="imgValidCodePhone"><img src="/regist/verify/v/0.8024761267006397" alt="验证码" title="点击更换验证码" class="o-ml-10 captcha" id="imgCodePhone"></li>
                 <li class="with-phone" id="needimgvalid" style="display: none;"><label><em>＊</em>短信验证码：</label><input name="validCode" type="text" value="" placeholder="短信验证码" id="validCode" rules="validCode"><input type="button" value="获取验证码" class="btn btn-shop-gray btn-shop-s o-ml-10" disabled="disabled" id="btn-getvericode"></li>
