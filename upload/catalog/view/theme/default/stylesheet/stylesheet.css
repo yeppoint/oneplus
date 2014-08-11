@@ -1597,9 +1597,10 @@ ul.box-filter > li ul {
 	overflow: auto;
 	min-height: 100px;
 	padding: 20px;
-	border-top: 1px solid #DBDEE1;
-	border-bottom: 1px solid #DBDEE1;
-	background: #F8F8F8;
+    /* 跟随oneplus的样式*/
+	/*border-top: 1px solid #DBDEE1;*/
+	/*border-bottom: 1px solid #DBDEE1;*/
+	/*background: #F8F8F8;*/
 }
 #footer h3 {
 	color: #000000;
