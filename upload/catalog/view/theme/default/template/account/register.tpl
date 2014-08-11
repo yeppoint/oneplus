@@ -22,7 +22,7 @@
         <a href="http://www.oneplus.cn/index.php/"><img src="http://statics.oneplus.cn/img/logo-oneplus.png" alt="一加手机官网" title="一加手机官网" class="o-f-l"></a>
         <nav class="o-ta-r nav-t">
                 </nav>
-        <strong class="o-ta-r">手机注册</strong>
+        <strong class="o-ta-r">邮箱注册</strong>
     </h1>
 </header>
     <section class="main">
