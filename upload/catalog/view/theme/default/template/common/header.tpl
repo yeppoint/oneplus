@@ -97,25 +97,17 @@
                     <nav>
                         <ul class="nav">
                             <li class="nav-li nav-li1">
-                                <a href="http://www.oneplus.cn/yijiashouji" class="nav-name">一加手机<sup class="icon-plus">+</sup></a>
+                                <a href="http://www.oneplus.cn/yijiashouji" class="nav-name">产品浏览</a>
                             </li>
                             <li class="nav-li nav-li3">
-                                <a href="http://www.oneplus.cn/accessories" class="nav-name">手机配件</a>
-                                <ul class="nav-list" style="display:none;">
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                </ul>
+                                <a href="http://www.oneplus.cn/accessories" class="nav-name">产品配件</a>
+
                             </li>
                             <li class="nav-li nav-li4">
                                 <a href="http://service.oneplus.cn" class="nav-name">客户服务</a>
                             </li>
                             <li class="nav-li nav-li4">
                                 <a href="http://support.oneplus.cn" class="nav-name">技术支持</a>
-                            </li>
-                            <li class="nav-li nav-li6">
-                                <a href="http://www.oneplusbbs.com" class="nav-name" target="_blank">一加社区</a>
                             </li>
                         </ul>
                     </nav>
@@ -125,23 +117,10 @@
     </header>
     <!--注意,这里在footer必须闭合-->
     <div id="container">
-    <div id="header">
-      <?php if ($logo) { ?>
-      <div id="logo" >
-          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
-      </div>
-      <?php } ?>
-      <?php echo $language; ?>
-      <?php echo $currency; ?>
-      <?php echo $cart; ?>
 
-    </div>
+        <?php if ($error) { ?>
 
+            <div class="warning"><?php echo $error ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 
-
-    <?php if ($error) { ?>
-
-        <div class="warning"><?php echo $error ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
-
-    <?php } ?>
-    <div id="notification"></div>
+        <?php } ?>
+        <div id="notification"></div>
