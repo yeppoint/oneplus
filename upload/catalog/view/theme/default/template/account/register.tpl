@@ -40,7 +40,7 @@
                 <li class="with-email" style="display: list-item;"><label><em>＊</em>电 子 邮 件：</label><input name="email" type="text" value="" placeholder="邮箱地址" id="email" rules="email"></li>
                 <li><label><em>＊</em>密 码 设 置：</label><input name="password" type="password" value="" placeholder="密码6~16位，数字/字母/字符至少两种" id="password" refid="password2" rules="password"></li>
                 <li><label><em>＊</em>密 码 确 认：</label><input name="password2" type="password" value="" placeholder="密码6~16位，数字/字母/字符至少两种" id="password2" refid="password" rules="password2"></li>
-                <li class="with-email" style="display: list-item;"><label><em>＊</em>验　证　码：</label><input name="imgValidCode" type="text" value="" placeholder="请输入验证码" id="imgValidCode"><img src="/regist/verify/v/0.014865639852359891" alt="验证码" title="点击更换验证码" class="o-ml-10 captcha" id="imgCode"></li>
+                <li class="with-email" style="display: list-item;"><label><em>＊</em>验　证　码：</label><input name="imgValidCode" type="text" value="" placeholder="请输入验证码" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" title="点击更换验证码" class="o-ml-10 captcha" id="imgCode"></li>
                 <li class="btns o-mt-25"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-submit">免费注册</a><a href="/login/index" class="btn btn-shop-gray btn-shop-m o-ml-10" target="_blank">登录</a><input type="hidden" name="reg_type" id="reg_type" value="2"></li>
                 <li class="tips o-c-6 o-fs-12 o-mt-40">点击“免费注册”，即表示您愿意遵守一加<a href="/regist/accord" target="_blank">用户协议</a></li>
             </ul>

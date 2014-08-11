@@ -32,7 +32,7 @@
             <ul class="o-mt-150 o-mb-150">
                 <li><label><em>＊</em>用户名：</label><input name="account"  type="text" value="" placeholder="邮箱" id="userAccount"></li>
                 <li><label><em>＊</em>密　码：</label><input name="password" type="password" value="" placeholder="密码" id="password"></li>
-                <li id="verifyLi" class=""><label><em>＊</em>验证码：</label><input name="imgValidCode" type="text" value="" placeholder="验证码" id="imgValidCode"><img src="/regist/verify" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
+                <li id="verifyLi" class=""><label><em>＊</em>验证码：</label><input name="imgValidCode" type="text" value="" placeholder="验证码" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
                 <li class="tips"><label class="o-ti-999">　提　示：</label><span class="validate_tip">&nbsp;</span></li>
                 <li class="rememberme"><a href="/login/forget" class="o-ml-30">[忘记密码]</a></li>
                 <li class="btns"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-login">登录</a><a href="/regist/index" class="btn btn-shop-gray btn-shop-m o-ml-10">注册</a></li>
