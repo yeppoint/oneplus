@@ -62,7 +62,6 @@ class ControllerExtensionModule extends Controller {
 		if ($files) {
 			foreach ($files as $file) {
 				$extension = basename($file, '.php');
-
 				$this->language->load('module/' . $extension);
 
 				$action = array();
