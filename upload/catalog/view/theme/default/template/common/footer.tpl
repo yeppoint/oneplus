@@ -62,7 +62,7 @@
         </div>
         <div class="cf container">
             <div class="foo-copyright">ICP © 2014 深圳市创尔科科技有限公司 版权所有<br><?php echo $powered; ?> </div>
-    </div>
+        </div>
 </footer>
 
 
