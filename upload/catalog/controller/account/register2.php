@@ -1,4 +1,4 @@
-<?php 
+<?php
 class ControllerAccountRegister extends Controller {
 	private $error = array();
 

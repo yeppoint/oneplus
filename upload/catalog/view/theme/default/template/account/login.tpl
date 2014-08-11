@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>一加账户登录</title>
+    <title>账户登录</title>
     <link rel="shortcut icon" href="http://statics.oneplus.cn/img/oneplus.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://statics.oneplus.cn/css/init.css" media="screen">
     <link rel="stylesheet" href="http://statics.oneplus.cn/css/common.css" media="screen">
