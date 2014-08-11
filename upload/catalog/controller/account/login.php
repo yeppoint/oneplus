@@ -103,40 +103,40 @@ class ControllerAccountLogin extends Controller {
 			}
 		}
 
-		$this->data['breadcrumbs'] = array();
+		// $this->data['breadcrumbs'] = array();
 
-		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
-			'href'      => $this->url->link('common/home'),       	
-			'separator' => false
-		);
+		// $this->data['breadcrumbs'][] = array(
+		// 	'text'      => $this->language->get('text_home'),
+		// 	'href'      => $this->url->link('common/home'),       	
+		// 	'separator' => false
+		// );
 
-		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_account'),
-			'href'      => $this->url->link('account/account', '', 'SSL'),
-			'separator' => $this->language->get('text_separator')
-		);
+		// $this->data['breadcrumbs'][] = array(
+		// 	'text'      => $this->language->get('text_account'),
+		// 	'href'      => $this->url->link('account/account', '', 'SSL'),
+		// 	'separator' => $this->language->get('text_separator')
+		// );
 
-		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_login'),
-			'href'      => $this->url->link('account/login', '', 'SSL'),      	
-			'separator' => $this->language->get('text_separator')
-		);
+		// $this->data['breadcrumbs'][] = array(
+		// 	'text'      => $this->language->get('text_login'),
+		// 	'href'      => $this->url->link('account/login', '', 'SSL'),      	
+		// 	'separator' => $this->language->get('text_separator')
+		// );
 
-		$this->data['heading_title'] = $this->language->get('heading_title');
+		// $this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_new_customer'] = $this->language->get('text_new_customer');
-		$this->data['text_register'] = $this->language->get('text_register');
-		$this->data['text_register_account'] = $this->language->get('text_register_account');
-		$this->data['text_returning_customer'] = $this->language->get('text_returning_customer');
-		$this->data['text_i_am_returning_customer'] = $this->language->get('text_i_am_returning_customer');
-		$this->data['text_forgotten'] = $this->language->get('text_forgotten');
+		// $this->data['text_new_customer'] = $this->language->get('text_new_customer');
+		// $this->data['text_register'] = $this->language->get('text_register');
+		// $this->data['text_register_account'] = $this->language->get('text_register_account');
+		// $this->data['text_returning_customer'] = $this->language->get('text_returning_customer');
+		// $this->data['text_i_am_returning_customer'] = $this->language->get('text_i_am_returning_customer');
+		// $this->data['text_forgotten'] = $this->language->get('text_forgotten');
 
-		$this->data['entry_email'] = $this->language->get('entry_email');
-		$this->data['entry_password'] = $this->language->get('entry_password');
+		// $this->data['entry_email'] = $this->language->get('entry_email');
+		// $this->data['entry_password'] = $this->language->get('entry_password');
 
-		$this->data['button_continue'] = $this->language->get('button_continue');
-		$this->data['button_login'] = $this->language->get('button_login');
+		// $this->data['button_continue'] = $this->language->get('button_continue');
+		// $this->data['button_login'] = $this->language->get('button_login');
 
 		if (isset($this->error['warning'])) {
 			$this->data['error_warning'] = $this->error['warning'];
@@ -144,9 +144,9 @@ class ControllerAccountLogin extends Controller {
 			$this->data['error_warning'] = '';
 		}
 
-		$this->data['action'] = $this->url->link('account/login', '', 'SSL');
-		$this->data['register'] = $this->url->link('account/register', '', 'SSL');
-		$this->data['forgotten'] = $this->url->link('account/forgotten', '', 'SSL');
+		// $this->data['action'] = $this->url->link('account/login', '', 'SSL');
+		// $this->data['register'] = $this->url->link('account/register', '', 'SSL');
+		// $this->data['forgotten'] = $this->url->link('account/forgotten', '', 'SSL');
 
 		// Added strpos check to pass McAfee PCI compliance test (http://forum.opencart.com/viewtopic.php?f=10&t=12043&p=151494#p151295)
 		if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
@@ -185,14 +185,14 @@ class ControllerAccountLogin extends Controller {
 			$this->template = 'default/template/account/login.tpl';
 		}
 
-		$this->children = array(
-			'common/column_left',
-			'common/column_right',
-			'common/content_top',
-			'common/content_bottom',
-			'common/footer',
-			'common/header'	
-		);
+		// $this->children = array(
+		// 	'common/column_left',
+		// 	'common/column_right',
+		// 	'common/content_top',
+		// 	'common/content_bottom',
+		// 	'common/footer',
+		// 	'common/header'	
+		// );
 
 		$this->response->setOutput($this->render());
 	}
