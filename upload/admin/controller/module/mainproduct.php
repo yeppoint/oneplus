@@ -55,24 +55,17 @@ class ControllerModuleMainproduct extends Controller {
 		}
 		
 		$this->data['token'] = $this->session->data['token'];
-		$this->data['action'] = $this->url->link('module/mainproduct',
-												 'token=' . $this->session->data['token'],
-												 'SSL');
+		$this->data['action'] = $this->url->link('module/mainproduct', 'token=' . $this->session->data['token'], 'SSL');
 		$this->data['filter_action'] = $this->url->link('module/mainproduct/filter', '', 'SSL');
-		$this->data['cancel'] = $this->url->link('extension/module',
-												 'token=' . $this->session->data['token'],
-												 'SSL');
-		
-		$this->data['status'] = '';
-		$this->data['product'] = '';
-		$this->data['general_description'] = '';
-		$this->data['function_description'] = '';
-		$this->data['design_description'] = '';
-		$this->data['attribute_description'] = '';
+		$this->data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
+        
+        $this->load->model('localisation/language');
+        $this->data['languages'] = $this->model_localisation_language->getLanguages();
 		
 		$mainproduct_setting = $this->model_setting_setting->getSetting('mainproduct');
 		if ($mainproduct_setting) {
 			$this->load->model('tool/image');
+            /*
 			$this->data['product'] = $this->model_catalog_product->getProduct($mainproduct_setting['product-id']);
 			$this->data['status'] = $mainproduct_setting['status'];
 			$this->data['product']['image'] = $this->model_tool_image->resize($this->data['product']['image'], 40, 40);
@@ -80,6 +73,15 @@ class ControllerModuleMainproduct extends Controller {
 			$this->data['function_description'] = $mainproduct_setting['function-description'];
 			$this->data['design_description'] = $mainproduct_setting['design-description'];
 			$this->data['attribute_description'] = $mainproduct_setting['attribute-description'];
+            */
+            $this->data['mainproduct'] = array();
+            $this->data['mainproduct']['product'] = $this->model_catalog_product->getProduct($mainproduct_setting['product-id']);
+            $this->data['mainproduct']['status'] = $mainproduct_setting['status'];
+            $this->data['mainproduct']['product']['image'] = $this->model_tool_image->resize($this->data['mainproduct']['product']['image'], 40, 40);
+            $this->data['mainproduct']['general_description'] = $mainproduct_setting['general-description'];
+            $this->data['mainproduct']['function_description'] = $mainproduct_setting['function-description'];
+            $this->data['mainproduct']['design_description'] = $mainproduct_setting['design-description'];
+            $this->data['mainproduct']['attribute_description'] = $mainproduct_setting['attribute-description'];
 		}
 		
 		$this->template = 'module/mainproduct.tpl';

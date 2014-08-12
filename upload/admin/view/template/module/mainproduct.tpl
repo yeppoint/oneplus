@@ -20,8 +20,8 @@
 						<td><?php echo $text_status; ?></td>
 						<td>
 							<select name="status">
-								<?php if ($product) { ?>
-								<?php if ((int)$status) { ?>
+								<?php if (isset($mainproduct)) { ?>
+								<?php if ((int)$mainproduct['status']) { ?>
 								<option value="1" selected="selected"><?php echo $text_enable; ?></option>
 								<option value="0"><?php echo $text_disable; ?></option>
 								<?php } else { ?>
@@ -55,15 +55,15 @@
 									</tr>
 								</thead>
 								<tbody id="option-list">
-									<?php if ($product) { ?>
+									<?php if (isset($mainproduct)) { ?>
 									<tr>
-										<td><input type="hidden" name="product-id" value="<?php echo $product['product_id']?>"></td>
-										<td><img src="<?php echo $product['image']; ?>" alt="" /></td>
-										<td><?php echo $product['name']; ?></td>
-										<td><?php echo $product['model']; ?></td>
-										<td><?php echo $product['price']; ?></td>
-										<td><?php echo $product['quantity']; ?></td>
-										<td><?php echo $product['status']; ?></td>
+										<td><input type="hidden" name="product-id" value="<?php echo $mainproduct['product']['product_id']?>"></td>
+										<td><img src="<?php echo $mainproduct['product']['image']; ?>" alt="" /></td>
+										<td><?php echo $mainproduct['product']['name']; ?></td>
+										<td><?php echo $mainproduct['product']['model']; ?></td>
+										<td><?php echo $mainproduct['product']['price']; ?></td>
+										<td><?php echo $mainproduct['product']['quantity']; ?></td>
+										<td><?php echo $mainproduct['product']['status']; ?></td>
 									</tr>
 									<?php } ?>
 								</tbody>
@@ -72,36 +72,47 @@
 					</tr>
 				</table>
 				<table class="form">
+                    <?php foreach ($languages as $language) { ?>
 					<tr>
+                    <td><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /><strong><?php echo $language['name']; ?></strong></td>
 						<td>
-							<div id="tabs" class="htabs">
-								<a href="#tab-general"><?php echo $text_general; ?></a>
-								<a href="#tab-function"><?php echo $text_function; ?></a>
-								<a href="#tab-design"><?php echo $text_design; ?></a>
-								<a href="#tab-attribute"><?php echo $text_attribute; ?></a>
+							<div id="tabs<?php echo $language['language_id']; ?>" class="htabs">
+								<a href="#tab-general<?php echo $language['language_id']; ?>"><?php echo $text_general; ?></a>
+								<a href="#tab-function<?php echo $language['language_id']; ?>"><?php echo $text_function; ?></a>
+								<a href="#tab-design<?php echo $language['language_id']; ?>"><?php echo $text_design; ?></a>
+								<a href="#tab-attribute<?php echo $language['language_id']?>"><?php echo $text_attribute; ?></a>
 							</div>
-							<div id="tab-general">
-								<textarea name="general-description">
-									<?php echo $general_description; ?>
+							<div id="tab-general<?php echo $language['language_id']; ?>">
+								<textarea name="general-description[<?php echo $language['language_id']; ?>]">
+                                    <?php if (isset($mainproduct)) { ?>
+									<?php echo $mainproduct['general_description'][$language['language_id']]; ?>
+                                    <?php } ?>
 								</textarea>
 							</div>
-							<div id="tab-function">
-								<textarea name="function-description">
-									<?php echo $function_description; ?>
+							<div id="tab-function<?php echo $language['language_id']; ?>">
+								<textarea name="function-description[<?php echo $language['language_id']; ?>]">
+                                    <?php if (isset($mainproduct)) { ?>
+									<?php echo $mainproduct['function_description'][$language['language_id']]; ?>
+                                    <?php } ?>
 								</textarea>
 							</div>
-							<div id="tab-design">
-								<textarea name="design-description">
-									<?php echo $design_description; ?>
+							<div id="tab-design<?php echo $language['language_id']; ?>">
+								<textarea name="design-description[<?php echo $language['language_id']; ?>]">
+                                    <?php if (isset($mainproduct)) { ?>
+									<?php echo $mainproduct['design_description'][$language['language_id']]; ?>
+                                    <?php } ?>
 								</textarea>
 							</div>
-							<div id="tab-attribute">
-								<textarea name="attribute-description">
-									<?php echo $attribute_description; ?>
+							<div id="tab-attribute<?php echo $language['language_id']; ?>">
+								<textarea name="attribute-description[<?php echo $language['language_id']; ?>]">
+                                    <?php if (isset($mainproduct)) { ?>
+									<?php echo $mainproduct['attribute_description'][$language['language_id']]; ?>
+                                    <?php } ?>
 								</textarea>
 							</div>
 						</td>
 					</tr>
+                    <?php } ?>
 				</table>
 			</form>
 		</div>
@@ -109,7 +120,8 @@
 </div>
 <script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
-	CKEDITOR.replace('general-description', {
+    <?php foreach ($languages as $language) { ?>
+	CKEDITOR.replace("general-description[<?php echo $language['language_id']; ?>]", {
 		filebrowserBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserImageBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
@@ -117,7 +129,7 @@
 		filebrowserImageUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>'
 	});
-	CKEDITOR.replace('function-description', {
+	CKEDITOR.replace("function-description[<?php echo $language['language_id']; ?>]", {
 		filebrowserBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserImageBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
@@ -125,7 +137,7 @@
 		filebrowserImageUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>'
 	});
-	CKEDITOR.replace('design-description', {
+	CKEDITOR.replace("design-description[<?php echo $language['language_id']; ?>]", {
 		filebrowserBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserImageBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
@@ -133,7 +145,7 @@
 		filebrowserImageUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>'
 	});
-	CKEDITOR.replace('attribute-description', {
+	CKEDITOR.replace("attribute-description[<?php echo $language['language_id']; ?>]", {
 		filebrowserBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserImageBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashBrowseUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
@@ -141,9 +153,11 @@
 		filebrowserImageUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 		filebrowserFlashUploadUrl:'index.php?route=common/filemanager&token=<?php echo $token; ?>'
 	});
+    <?php } ?>
 </script>
 <script type="text/javascript">
-	$('#tabs a').tabs();
+	$('#tabs1 a').tabs();
+	$('#tabs2 a').tabs();
 </script>
 <script type="text/javascript">
 	function filter_button_clicked() {
