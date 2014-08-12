@@ -17,11 +17,11 @@ class ControllerAccountRegister extends Controller {
             /**
              * if faild return json:
              * {
-                    error:'error msg..'
+             *       error:'error msg..'
              * }
              *if ok return json:
              * {
-                    redirect :'index.php'
+             *       redirect :'index.php'
              * }
              */
             if($this->validate()){
