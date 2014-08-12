@@ -8,7 +8,7 @@
 !/upload/system/cache/index.html
 
 # Image File
-!/upload/image/no_image.jpg
+/upload/image
 
 # Image Cache Files
 /upload/image/cache/*
