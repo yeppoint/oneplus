@@ -33,12 +33,14 @@ $_['entry_password']       = 'Password:';
 $_['entry_confirm']        = 'Password Confirm:';
 
 // Error
+$_['error_captcha']        = 'captcha incorrect!';
 $_['error_exists']         = 'Warning: E-Mail Address is already registered!';
 $_['error_firstname']      = 'First Name must be between 1 and 32 characters!';
 $_['error_lastname']       = 'Last Name must be between 1 and 32 characters!';
 $_['error_email']          = 'E-Mail Address does not appear to be valid!';
 $_['error_telephone']      = 'Telephone must be between 3 and 32 characters!';
-$_['error_password']       = 'Password must be between 4 and 20 characters!';
+$_['error_password']       = 'Password must be between 6 and 16 characters!';
+$_['error_password_diff']  = 'Password that you input are not same!';
 $_['error_confirm']        = 'Password confirmation does not match password!';
 $_['error_company_id']     = 'Company ID required!';
 $_['error_tax_id']         = 'Tax ID required!';
@@ -49,4 +51,5 @@ $_['error_postcode']       = 'Postcode must be between 2 and 10 characters!';
 $_['error_country']        = 'Please select a country!';
 $_['error_zone']           = 'Please select a region / state!';
 $_['error_agree']          = 'Warning: You must agree to the %s!';
+
 ?>
