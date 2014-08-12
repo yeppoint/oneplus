@@ -730,7 +730,7 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['product_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
 		}
-
+		
 		$this->data['token'] = $this->session->data['token'];
 
 		$this->load->model('localisation/language');
