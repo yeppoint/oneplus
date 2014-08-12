@@ -37,12 +37,14 @@ $_['entry_password']       = '输入密码：';
 $_['entry_confirm']        = '确认密码：';
 
 // Error
+$_['error_captcha']        = '验证码不正确!';
 $_['error_exists']         = '警告： 该邮箱地址已被注册、请换一个电子邮箱！';
 $_['error_firstname']      = '名字必须在1到32字符之间！';
 $_['error_lastname']       = '姓氏必须在1到32字符之间！';
 $_['error_email']          = '无效的邮箱地址！';
 $_['error_telephone']      = '电话号码必须为3到32字节！';
-$_['error_password']       = '密码必须在4到20字符之间！';
+$_['error_password']       = '密码必须在4到16字符之间！';
+$_['error_password_diff']  = '输入的密码不一致!';
 $_['error_confirm']        = '确认密码与输入密码不一致！';
 $_['error_company_id']     = '公司注册号必填！';
 $_['error_tax_id']         = '公司税号必填！';

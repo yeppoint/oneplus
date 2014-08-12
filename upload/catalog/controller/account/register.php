@@ -13,41 +13,57 @@ class ControllerAccountRegister extends Controller {
 
 		$this->load->model('account/customer');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-			$this->model_account_customer->addCustomer($this->request->post);
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') ) {
+            /**
+             * if faild return json:
+             * {
+                    error:'error msg..'
+             * }
+             *if ok return json:
+             * {
+                    redirect :'index.php'
+             * }
+             */
+            if($this->validate()){
+                $this->model_account_customer->addCustomer($this->request->post);
 
-			$this->customer->login($this->request->post['email'], $this->request->post['password']);
+                $this->customer->login($this->request->post['email'], $this->request->post['password']);
 
-			unset($this->session->data['guest']);
+                unset($this->session->data['guest']);
 
-			// Default Shipping Address
-			// if ($this->config->get('config_tax_customer') == 'shipping') {
-			// 	$this->session->data['shipping_country_id'] = $this->request->post['country_id'];
-			// 	$this->session->data['shipping_zone_id'] = $this->request->post['zone_id'];
-			// 	$this->session->data['shipping_postcode'] = $this->request->post['postcode'];				
-			// }
+                $json =array(
+                    'redirect' =>'index.php',
+                );
 
-			// Default Payment Address
-			// if ($this->config->get('config_tax_customer') == 'payment') {
-			// 	$this->session->data['payment_country_id'] = $this->request->post['country_id'];
-			// 	$this->session->data['payment_zone_id'] = $this->request->post['zone_id'];			
-			// }
+            }else{
+                if(isset($this->error['email'])){
+                    $error_msg = $this->error['email'];
+                }
 
-			$this->redirect($this->url->link('account/success'));
+                if(isset($this->error['warning'])){
+                    $error_msg = $this->error['warning'];
+                }
+
+                if(isset($this->error['password'] )){
+                    $error_msg =   $this->error['password'] ;
+                }
+
+                if(isset($this->error['captcha'])){
+                    $error_msg =   $this->error['captcha'] ;
+                }
+
+                if(isset($this->error['password_diff'])){
+                    $error_msg =   $this->error['password_diff'] ;
+                }
+
+                $json =array(
+                        'error' =>$error_msg,
+                 );
+            }
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+            return;
 		}
-
-		if(isset($this->error['email'])){
-			$this->data['error'] = $this->error['email'];
-		}
-
-		if(isset($this->error['warning'])){
-			$this->data['error'] = $this->error['warning'];
-		}
-
-		if(isset(  $this->error['password'] )){
-			$this->data['error'] =   $this->error['password'] ;
-		}
-
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/register.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/register.tpl';
@@ -59,7 +75,9 @@ class ControllerAccountRegister extends Controller {
 	}
 
 	protected function validate() {
-	
+        if(!isset($this->session->data['captcha']) || $this->request->post['captcha'] != $this->session->data['captcha'] ){
+            $this->error['captcha'] =$this->language->get('error_captcha');
+        }
 
 		if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*\.[a-z]{2,6}$/i', $this->request->post['email'])) {
 			$this->error['email'] = $this->language->get('error_email');
@@ -83,22 +101,18 @@ class ControllerAccountRegister extends Controller {
 		if ((utf8_strlen($this->request->post['password']) < 6) || (utf8_strlen($this->request->post['password']) > 16)) {
 			$this->error['password'] = $this->language->get('error_password');
 		}
-		// agree check
-		// if ($this->config->get('config_account_id')) {
-		// 	$this->load->model('catalog/information');
 
-		// 	$information_info = $this->model_catalog_information->getInformation($this->config->get('config_account_id'));
-
-		// 	if ($information_info && !isset($this->request->post['agree'])) {
-		// 		$this->error['warning'] = sprintf($this->language->get('error_agree'), $information_info['title']);
-		// 	}
-		// }
+        if($this->request->post['password'] != $this->request->post['password2']){
+            $this->error['password_diff'] = $this->language->get('error_password_diff');
+        }
 
 		if (!$this->error) {
 			return true;
 		} else {
 			return false;
 		}
+
+
 	}
 
 	public function country() {
