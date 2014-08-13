@@ -63,8 +63,8 @@
                                 <div class="nav-name nav-login-t">
                                                                 <span>
                                         <i class="icon-user"></i>
-                                        <a href="#" id="glogin" class="t">登录</a> /
-                                        <a href="http://account.oneplus.cn/regist/index" target="_blank"  id="gregist" class="t">注册</a>
+                                        <a href="index.php?route=account/login" id="glogin" class="t">登录</a> /
+                                        <a href="index.php?route=account/register" id="gregist" class="t">注册</a>
                                     </span>
                                 </div>
                             </li>
@@ -97,7 +97,7 @@
                     <nav>
                         <ul class="nav">
                             <li class="nav-li nav-li1">
-                                <a href="http://www.oneplus.cn/yijiashouji" class="nav-name">产品浏览</a>
+                                <a href="index.php?route=module/mainproduct/general" class="nav-name">产品浏览</a>
                             </li>
                             <li class="nav-li nav-li3">
                                 <a href="http://www.oneplus.cn/accessories" class="nav-name">产品配件</a>
@@ -112,11 +112,11 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
+            </div>  
         </div>
     </header>
     <!--注意,这里在footer必须闭合-->
-    <div id="container">
+   <!--  <div id="container">
 
         <?php if ($error) { ?>
 
@@ -124,3 +124,4 @@
 
         <?php } ?>
         <div id="notification"></div>
+ -->
