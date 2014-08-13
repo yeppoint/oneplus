@@ -2,6 +2,12 @@
 
 class ControllerModuleMainproduct extends Controller {
     public function index() {
+        $this->load->language('module/mainproduct');
+        $this->data['text_general'] = $this->language->get('text_general');
+        $this->data['text_function'] = $this->language->get('text_function');
+        $this->data['text_design'] = $this->language->get('text_design');
+        $this->data['text_attribute'] = $this->language->get('text_attribute');
+        
         $this->load->model('catalog/product');
         $this->load->model('setting/setting');
         
