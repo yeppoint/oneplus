@@ -4,13 +4,17 @@ $_['heading_title']        = 'Register Account';
 
 // Text
 $_['text_account']         = 'Account';
-$_['text_register']        = 'Register';
+// $_['text_register']        = 'Register';
 $_['text_account_already'] = 'If you already have an account with us, please login at the <a href="%s">login page</a>.';
 $_['text_your_details']    = 'Your Personal Details';
 $_['text_your_address']    = 'Your Address';
 $_['text_newsletter']      = 'Newsletter';
 $_['text_your_password']   = 'Your Password';
 $_['text_agree']           = 'I have read and agree to the <a class="colorbox" href="%s" alt="%s"><b>%s</b></a>';
+//my settting
+$_['text_email_register']  = 'Register by Email';
+$_['text_register']        = 'Register';
+$_['text_login']           = 'Login';
 
 // Entry
 $_['entry_firstname']      = 'First Name:';
@@ -29,8 +33,14 @@ $_['entry_city']           = 'City:';
 $_['entry_country']        = 'Country:';
 $_['entry_zone']           = 'Region / State:';
 $_['entry_newsletter']     = 'Subscribe:';
+// $_['entry_password']       = 'Password:';
+// $_['entry_confirm']        = 'Password Confirm:';
+//my settting
+$_['entry_email']          = 'E-Mail:';
 $_['entry_password']       = 'Password:';
-$_['entry_confirm']        = 'Password Confirm:';
+$_['entry_confirm']        = 'Confirm:';
+$_['entry_captcha']        = 'Captcha:';
+$_['entry_password_notic'] = '6~16 characters,Number/Letter';
 
 // Error
 $_['error_captcha']        = 'captcha incorrect!';

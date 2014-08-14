@@ -6,11 +6,16 @@ $_['heading_title']                = 'Account Login';
 $_['text_account']                 = 'Account';
 $_['text_login']                   = 'Login';
 $_['text_new_customer']            = 'New Customer';
-$_['text_register']                = 'Register Account';
+$_['text_register']                = 'Register';
 $_['text_register_account']        = 'By creating an account you will be able to shop faster, be up to date on an order\'s status, and keep track of the orders you have previously made.';
 $_['text_returning_customer']      = 'Returning Customer';
 $_['text_i_am_returning_customer'] = 'I am a returning customer';
 $_['text_forgotten']               = 'Forgotten Password';
+$_['text_welcome']                 = 'Welcome to Login';
+$_['text_email']                   = 'Email';
+$_['text_username']                = 'Username';
+$_['text_password']                = 'Password';
+$_['text_captcha']                 = 'Captcha';
 
 // Entry
 $_['entry_email']                  = 'E-Mail Address:';

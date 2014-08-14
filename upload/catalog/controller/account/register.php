@@ -4,6 +4,19 @@ class ControllerAccountRegister extends Controller {
 	//email password 
 	////data[''error]
 	public function index() {
+        $this->load->language('account/register');
+
+        $this->data['text_email_register'] = $this->language->get('text_email_register');
+        $this->data['entry_email'] = $this->language->get('entry_email');
+        $this->data['entry_password'] = $this->language->get('entry_password');
+        $this->data['entry_confirm'] = $this->language->get('entry_confirm');
+        $this->data['entry_captcha'] = $this->language->get('entry_captcha');
+        $this->data['entry_password_notic'] = $this->language->get('entry_password_notic');
+        $this->data['text_register'] = $this->language->get('text_register');
+        $this->data['text_login'] = $this->language->get('text_login');
+
+
+
 		if ($this->customer->isLogged()) {
 			$this->redirect($this->url->link('account/account', '', 'SSL'));
 		}

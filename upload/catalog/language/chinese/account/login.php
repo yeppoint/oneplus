@@ -9,11 +9,17 @@ $_['heading_title']                = '用户登录';
 $_['text_account']                 = '账户';
 $_['text_login']                   = '登录';
 $_['text_new_customer']            = '用户注册';
-$_['text_register']                = '注册账户';
+$_['text_register']                = '注册';
 $_['text_register_account']        = '注册一个账户以便您更快捷地购物， 查看订单状态， 查看订购记录， 和更多的管理项目。';
 $_['text_returning_customer']      = '会员登录';
 $_['text_i_am_returning_customer'] = '如果您已经是本站会员，请直接登录。';
 $_['text_forgotten']               = '忘记密码？';
+$_['text_welcome']                 = '欢迎登录';
+$_['text_email']                   = '邮箱';
+$_['text_username']                = '用户名';
+$_['text_password']                = '密码';
+$_['text_captcha']                 = '验证码';
+
 
 // Entry
 $_['entry_email']                  = '邮箱地址：';

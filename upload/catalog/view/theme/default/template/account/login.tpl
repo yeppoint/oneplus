@@ -20,19 +20,19 @@
         <a href="http://www.oneplus.cn/index.php/"><img src="http://statics.oneplus.cn/img/logo-oneplus.png" alt="一加手机官网" title="一加手机官网" class="o-f-l"></a>
         <nav class="o-ta-r nav-t">
                 </nav>
-        <strong class="o-ta-r">欢迎登录</strong>
+        <strong class="o-ta-r"><?php echo $text_welcome; ?></strong>
     </h1>
 </header>
     <section class="main">
     <div class="main main-login">
         <form class="form-login">
             <ul class="o-mt-150 o-mb-150">
-                <li><label><em>＊</em>用户名：</label><input name="account"  type="text" value="" placeholder="邮箱" id="userAccount"></li>
-                <li><label><em>＊</em>密　码：</label><input name="password" type="password" value="" placeholder="密码" id="password"></li>
-                <li id="verifyLi" class=""><label><em>＊</em>验证码：</label><input name="imgValidCode" type="text" value="" placeholder="验证码" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
+                <li><label><?php echo $text_username; ?>：</label><input name="account"  type="text" value="" placeholder="<?php echo $text_email; ?>" id="userAccount"></li>
+                <li><label><?php echo $text_password; ?>：</label><input name="password" type="password" value="" placeholder="<?php echo $text_password; ?>" id="password"></li>
+                <li id="verifyLi" class=""><label><?php echo $text_captcha; ?>：</label><input name="imgValidCode" type="text" value="" placeholder="<?php echo $text_captcha; ?>" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
                 <li class="tips"><label class="o-ti-999">　提　示：</label><span class="validate_tip">&nbsp;</span></li>
                 <li style="visibility:hidden" class="rememberme"><a href="#" class="o-ml-30">[忘记密码]</a></li>
-                <li class="btns"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-login">登录</a><a href="index.php?route=account/register" class="btn btn-shop-gray btn-shop-m o-ml-10">注册</a></li>
+                <li class="btns"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-login"><?php echo $text_login; ?></a><a href="index.php?route=account/register" class="btn btn-shop-gray btn-shop-m o-ml-10"><?php echo $text_register; ?></a></li>
             </ul>
         </form>
     </div>

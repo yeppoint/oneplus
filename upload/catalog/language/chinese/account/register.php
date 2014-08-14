@@ -7,13 +7,17 @@ $_['heading_title']        = '用户注册';
 
 // Text
 $_['text_account']         = '我的账户';
-$_['text_register']        = '用户注册';
+// $_['text_register']        = '用户注册';
 $_['text_account_already'] = '欢迎来到我们网站，如果您是新用户，请填写下面的表单进行注册。如果您已经是本站的会员，请您直接<a href="%s">登录</a>。';
 $_['text_your_details']    = '您的个人资料';
 $_['text_your_address']    = '您的详细地址';
 $_['text_newsletter']      = '选择订阅方式';
 $_['text_your_password']   = '您的账户密码';
 $_['text_agree']           = '我已经阅读并同意 <a class="colorbox" href="%s" alt="%s"><b>%s</b></a>条款';
+//my settting
+$_['text_email_register']  = '邮箱注册';
+$_['text_register']        = '注册';
+$_['text_login']           = '登录';
 
 // Entry
 $_['entry_firstname']      = '您的名字：';
@@ -33,8 +37,14 @@ $_['entry_city']           = '所在城市：';
 $_['entry_country']        = '所在国家：';
 $_['entry_zone']           = '地区/省份：';
 $_['entry_newsletter']     = '订阅信息：';
-$_['entry_password']       = '输入密码：';
-$_['entry_confirm']        = '确认密码：';
+// $_['entry_password']       = '输入密码：';
+// $_['entry_confirm']        = '确认密码：';
+//my settting
+$_['entry_email']          = '电子邮箱:';
+$_['entry_password']       = '输入密码:';
+$_['entry_confirm']        = '确认密码:';
+$_['entry_captcha']        = '验证码:';
+$_['entry_password_notic'] = '5~16位,数字/字母';
 
 // Error
 $_['error_captcha']        = '验证码不正确!';
