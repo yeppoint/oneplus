@@ -1,6 +1,6 @@
 <?php  
 class Controllermodulepavblogcategory extends Controller {
-	protected function index($setting) {
+	public function index() {
 		static $module = 0;
 		
 		$this->load->model('pavblog/category');
@@ -43,7 +43,7 @@ class Controllermodulepavblogcategory extends Controller {
 			$this->template = 'default/template/module/pavblogcategory.tpl';
 		}
 		
-		$this->render();
+		$this->response->setOutput($this->render());
 	}
 	
 }

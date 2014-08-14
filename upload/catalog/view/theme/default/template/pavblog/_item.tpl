@@ -25,9 +25,6 @@
 		<?php if( $config->get('cat_show_hits') ) { ?>
 		<span class="hits"><span><?php echo $this->language->get("text_hits");?></span> <?php echo $blog['hits'];?></span>
 		<?php } ?>
-		<?php if( $config->get('cat_show_comment_counter') ) { ?>
-		<span class="comment_count"><span><?php echo $this->language->get("text_comment_count");?></span> <?php echo $blog['comment_count'];?></span>
-		<?php } ?>
 	</div>
 	<div class="blog-body">
 		<?php if( $blog['thumb'] && $config->get('cat_show_image') )  { ?>

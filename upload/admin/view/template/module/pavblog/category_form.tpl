@@ -29,12 +29,6 @@ $module_row= 'ss';
 				<td>Title</td>
 				<td><input name="pavblog_category_description[<?php echo $language['language_id'];?>][title]" value="<?php echo $menu_description[$language['language_id']]['title'];?>"/></td>
               </tr>
-			   <tr>
-				<td><?php echo $this->language->get('entry_description');?></td>
-				<td>
-					<textarea name="pavblog_category_description[<?php echo $language['language_id'];?>][description]" value=""><?php echo $menu_description[$language['language_id']]['description'];?></textarea>
-				</td>
-              </tr>
             </table>
           </div>
           <?php } ?>
@@ -47,50 +41,7 @@ $module_row= 'ss';
 				<?php echo $menus;?>
  			</td>
 		</tr>
-		 <tr>
-              <td><?php echo $entry_image;  ?></td>
-              <td valign="top"><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" />
-                  <input type="hidden" name="pavblog_category[image]" value="<?php echo $menu['image']; ?>" id="image" />
-                  <br />
-                  <a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-            </tr>
-		<tr>
-			<td><?php echo $this->language->get('entry_menuclass');?></td>
-				
-			<td>
-				<input type="text" name="pavblog_category[menu_class]" value="<?php echo $menu['menu_class']?>"/>
-				
- 			</td>
-		</tr>	
-	
-	 
 	</table>
-	
-	<div id="tab-meta">
-		<h3><?php echo $this->language->get('text_seo_data');?></h3>
-		<div class="pav-content" style="width:100%">
-			<table class="form">
-				<tr>
-              <td><?php echo $this->language->get('entry_keyword'); ?></td>
-              <td><input type="text" name="pavblog_category[keyword]" value="<?php echo $menu['keyword'];?>" size="90"/></td>
-            </tr>
-				<tr>
-					<td><?php echo $this->language->get('entry_meta_title');?></td>
-					<td><input type="text" name="pavblog_category[meta_title]" value="<?php echo $menu['meta_title'];?>"/></td>
-				</tr>
-				<tr>
-					<td><?php echo $this->language->get('entry_meta_keyword');?></td>
-					<td><textarea  name="pavblog_category[meta_keyword]"><?php echo $menu['meta_keyword'];?></textarea></td>
-				</tr>
-				<tr>
-					<td><?php echo $this->language->get('entry_meta_description');?></td>
-					<td><textarea  name="pavblog_category[meta_description]" rows="6" cols="40"><?php echo $menu['meta_description'];?></textarea></td>
-				</tr>
-			
-				
-			</table>
-		</div>
-	</div>
 	<input type="hidden" name="pavblog_category[category_id]" value="<?php echo $menu['category_id']?>"/>
 </div>
 <?php endif; ?>
@@ -102,20 +53,6 @@ $("#pavblog_category-type_submenu").change( function(){
 	$("#type_submenu-"+$(this).val()).show();
 } );
 
-
-  <?php foreach ($languages as $language) { ?>
-CKEDITOR.replace('pavblog_category_description[<?php echo $language['language_id']; ?>][description]', {
-	filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
-	filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
-	filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
-	filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
-	filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
-	filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
-});
-<?php } ?>
-
-
-
    $( ".htabs a" ).tabs();
    $(".pavblog_categorytype").hide();
    $("#pavblog_categorytype-"+ $("#pavblog_categorytype").val()).show();
@@ -123,11 +60,6 @@ CKEDITOR.replace('pavblog_category_description[<?php echo $language['language_id
 		$(".pavblog_categorytype").hide();
 		$("#pavblog_categorytype-"+$(this).val()).show();
    } );
-   
-   
-
-
-
 
 $('input[name=\'pavblog_category-manufacturer\']').autocomplete({
 	delay: 500,

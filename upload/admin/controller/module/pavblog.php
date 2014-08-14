@@ -385,9 +385,11 @@ class ControllerModulePavblog extends Controller {
 			if( empty($this->request->post['pavblog_blog_description'][$language_id ]['title']) ){
 				$this->error['warning'][]=$this->language->get('error_missing_title');
 			}
+            /*
 			if( empty($this->request->post['pavblog_blog_description'][$language_id ]['description']) ){
 				$this->error['warning'][]=$this->language->get('error_missing_description');
 			}
+            */
 			if( empty($this->request->post['pavblog_blog_description'][$language_id ]['content']) ){
 				$this->error['warning'][]=$this->language->get('error_missing_content');
 			}
