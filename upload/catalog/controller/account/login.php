@@ -4,6 +4,25 @@ class ControllerAccountLogin extends Controller {
 
 	public function index() {
         $this->load->language('account/login');
+        //logo and icon
+        if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+            $server = $this->config->get('config_ssl');
+        } else {
+            $server = $this->config->get('config_url');
+        }
+
+        if ($this->config->get('config_icon') && file_exists(DIR_IMAGE . $this->config->get('config_icon'))) {
+            $this->data['icon'] = $server . 'image/' . $this->config->get('config_icon');
+        } else {
+            $this->data['icon'] = '';
+        }
+        
+        if ($this->config->get('config_logo') && file_exists(DIR_IMAGE . $this->config->get('config_logo'))) {
+            $this->data['logo'] = $server . 'image/' . $this->config->get('config_logo');
+        } else {
+            $this->data['logo'] = '';
+        }   
+        //text
         $this->data['text_welcome'] = $this->language->get('text_welcome');
         $this->data['text_email'] = $this->language->get('text_email');
         $this->data['text_username'] = $this->language->get('text_username');

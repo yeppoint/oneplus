@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>账户登录</title>
-    <link rel="shortcut icon" href="http://statics.oneplus.cn/img/oneplus.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://statics.oneplus.cn/css/init.css" media="screen">
-    <link rel="stylesheet" href="http://statics.oneplus.cn/css/common.css" media="screen">
-    <link rel="stylesheet" href="http://statics.oneplus.cn/css/account.css" media="screen">
-    <script src="http://statics.oneplus.cn/js/lib/jquery-1.9.1.js"></script>
-    <script src="http://statics.oneplus.cn/js/lib/respond.min.js"></script>
+    <link rel="shortcut icon" href="<?php if($icon)echo $icon;?>" type="image/x-icon">
+    <link rel="stylesheet" href="catalog/view/css/init.css" media="screen">
+    <link rel="stylesheet" href="catalog/view/css/common.css" media="screen">
+    <link rel="stylesheet" href="catalog/view/css/account.css" media="screen">
+    <script src="catalog/view/javascript/jquery/jquery-1.9.1.js"></script>
+    <script src="catalog/view/javascript/respond.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://statics.oneplus.cn/js/lib/html5.js"></script>
     <![endif]-->
@@ -17,7 +17,7 @@
 <body class="o-ta-l">
 <header>
     <h1>
-        <a href="http://www.oneplus.cn/index.php/"><img src="http://statics.oneplus.cn/img/logo-oneplus.png" alt="一加手机官网" title="一加手机官网" class="o-f-l"></a>
+        <a href="index.php"><img src="<?php if(isset($logo)&&$logo)echo $logo; ?>"  class="o-f-l"></a>
         <nav class="o-ta-r nav-t">
                 </nav>
         <strong class="o-ta-r"><?php echo $text_welcome; ?></strong>
