@@ -2,6 +2,11 @@
 class ControllerProductFeatured extends Controller{
     //get produect  ..then var_dump it
     public function Index(){
+        $this->load->language('product/featured');
+
+        $this->data['featured_product'] = $this->language->get('featured_product');
+        $this->data['all_product'] = $this->language->get('all_product');
+
         $this->load->model('catalog/product');
         $this->load->model('tool/image');
 
