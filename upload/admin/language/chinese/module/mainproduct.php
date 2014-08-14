@@ -1,6 +1,6 @@
 <?php
 
-$_['heading_title']             = '主打产品';
+$_['heading_title']             = '主打商品';
 
 $_['text_module'] 	            = '模块';
 $_['text_filter_name']          = '产品名称：';
@@ -9,7 +9,7 @@ $_['text_general']              = '概述';
 $_['text_function']             = '功能';
 $_['text_design']               = '设计';
 $_['text_attribute']            = '属性';
-$_['text_success']              = '你已经成功修改了主打产品模块';
+$_['text_success']              = '成功：你已经成功更新主打商品';
 $_['text_status']               = '状态：';
 $_['text_disable']              = '关闭';
 $_['text_enable']               = '开启';
