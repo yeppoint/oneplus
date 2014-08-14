@@ -5,13 +5,12 @@ class ControllerAccountLogin extends Controller {
 	public function index() {
         $this->load->language('account/login');
         $this->data['text_welcome'] = $this->language->get('text_welcome');
-         $this->data['text_email'] = $this->language->get('text_email');
-          $this->data['text_username'] = $this->language->get('text_username');
-           $this->data['text_password'] = $this->language->get('text_password');
-            $this->data['text_captcha'] = $this->language->get('text_captcha');
-             $this->data['text_register'] = $this->language->get('text_register');
-
-  $this->data['text_login'] = $this->language->get('text_login');
+        $this->data['text_email'] = $this->language->get('text_email');
+        $this->data['text_username'] = $this->language->get('text_username');
+        $this->data['text_password'] = $this->language->get('text_password');
+        $this->data['text_captcha'] = $this->language->get('text_captcha');
+        $this->data['text_register'] = $this->language->get('text_register');
+        $this->data['text_login'] = $this->language->get('text_login');
          
 		$this->load->model('account/customer');
 
