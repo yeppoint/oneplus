@@ -10,7 +10,7 @@
     <?php if ($keywords) { ?>
         <meta name="keywords" content="<?php echo $keywords; ?>" />
     <?php } ?>
-    <?php if ($icon) { ?>
+    <?php if (isset($icon)&&$icon) { ?>
         <link href="<?php echo $icon; ?>" rel="icon" />
     <?php } ?>
     <?php foreach ($links as $link) { ?>
@@ -40,16 +40,16 @@
 
 </head>
 
-<link rel="stylesheet" type="text/css" href="http://statics.oneplus.cn/css/init.css?v=201407102142" media="screen">
-<link rel="stylesheet" type="text/css" href="http://statics.oneplus.cn/css/common.css?v=201407102142" media="screen">
-<link rel="stylesheet" type="text/css" href="http://statics.oneplus.cn/css/oneplus.css?v=201407102142" media="screen">
+<link rel="stylesheet" type="text/css" href="catalog/view/css/init.css" media="screen">
+<link rel="stylesheet" type="text/css" href="catalog/view/css/common.css" media="screen">
+<link rel="stylesheet" type="text/css" href="catalog/view/css/oneplus.css" media="screen">
 <body>
 
     <header>
         <div class="header">
             <div class="header-box">
                 <div class="container clearfix">
-                    <h1 class="logo"><a href="http://www.oneplus.cn/index.php"><img src="http://statics.oneplus.cn/img/logo-oneplus.png" alt="一加手机官网"></a></h1>
+                    <h1 class="logo"><a href="index.php"><img src="<?php if(isset($logo)&&$logo) echo $logo;?>" ></a></h1>
                     <div class="header-top">
                         <ul class="tul clearfix">
                             <li class="nav-t nav-login" id="nav-login">
