@@ -1,8 +1,9 @@
 <?php
 
-class ControllerClientServiceClientService extends Controller {
+class ControllerClientServiceHelpCenter extends Controller {
     public function index() {
         $this->document->addScript('catalog/view/javascript/help.js');
+        $this->document->addStyle('catalog/view/css/clientservice.css');
         $this->document->addStyle('catalog/view/css/help.css');
         $this->language->load('clientservice/clientservice');
         
@@ -12,25 +13,29 @@ class ControllerClientServiceClientService extends Controller {
             'text' => $this->language->get('text_home'),
             'separator' => false
         );
+        
         $this->data['breadcrumbs'][] = array(
             'href' => $this->url->link('clientservice/clientservice'),
             'text' => $this->language->get('text_clientservice'),
             'separator' => ' / '
         );
         
-        $this->data['text_selfservice'] = $this->language->get('text_selfservice');
-        $this->data['text_helpcenter'] = $this->language->get('text_helpcenter');
-        $this->data['text_contactservice'] = $this->language->get('text_contactservice');
-        $this->data['text_order_tracking'] = $this->language->get('text_order_tracking');
-        $this->data['text_delivery_tracking'] = $this->language->get('text_delivery_tracking');
-        $this->data['text_register'] = $this->language->get('text_register');
-        $this->data['text_forget_password'] = $this->language->get('text_forget_password');
-        $this->data['text_after_sale'] = $this->language->get('text_after_sale');
+        $this->data['breadcrumbs'][] = array(
+            'href' => $this->url->link('clientservice/clientservice/helpcenter'),
+            'text' => $this->language->get('text_helpcenter'),
+            'separator' => ' / '
+        );
+        
+        if ($this->request->server['REQUEST_METHOD'] == 'GET' && isset($this->request->get['faq_id'])) {
+            $this->data['blog_id'] = (int)$this->request->get['faq_id'];
+        }
         
         $this->load->model('pavblog/category');
         $this->load->model('pavblog/blog');
+        
         $all_articles = array();
         $all_categories = array();
+        
         $categories = $this->model_pavblog_category->getChild(1);
         
         foreach ($categories as $category) {
@@ -41,15 +46,16 @@ class ControllerClientServiceClientService extends Controller {
                 $all_categories[] = $category;
             }
         }
+        
         $this->data['all_articles'] = $all_articles;
         $this->data['all_categories'] = $all_categories;
         
-    	$this->template = 'default/template/clientservice/clientservice.tpl';
+     	$this->template = 'default/template/clientservice/helpcenter.tpl';
     	$this->children = array(
         	'common/header',
         	'common/footer'
-    	);
-    
+    	);   
+        
     	$this->response->setOutput($this->render());
     }
     

@@ -15,36 +15,27 @@
                 </ul>
                 <div class="guide-bd" style="display: block;">
                     <ul class="self-help parallel">
-                      	<li><a href="http://my.oneplus.cn" class="isLogin" target="_blank"><i class="icon-order"></i>查询订单</a></li>
-						<li><a href="http://my.oneplus.cn" class="isLogin" target="_blank"><i class="icon-cancelorder"></i>取消订单</a></li>
-                        <li><a href="http://my.oneplus.cn" class="isLogin" target="_blank"><i class="icon-delivery"></i>查询配送</a></li>
-                        <li><a href="javascript:;" id="checkRealBtn"><i class="icon-check"></i>防伪验证</a></li>
-                        <li><a href="javascript:;" class="notyet"><i class="icon-returns"></i>申请退换货</a></li>
-						<li><a href="http://account.oneplus.cn/regist/index" target="_blank"><i class="icon-register"></i>账户注册</a></li>
-						<li><a href="http://account.oneplus.cn/login/forget" target="_blank"><i class="icon-findpwd"></i>找回密码</a></li>
-						<li><a href="/Server/shopbranch" target="_blank"><i class="icon-shop"></i>查询售后网点</a></li>
-						<li><a href="javascript:;" class="notyet"><i class="icon-buyWarranty"></i>购买延保</a></li>
-						<li><a href="javascript:;" class="notyet"><i class="icon-checkWarranty"></i>查询延保</a></li>
+                      	<li><a href="#" class="isLogin" target="_blank"><i class="icon-order"></i><?php echo $text_order_tracking; ?></a></li>
+                        <li><a href="#" class="isLogin" target="_blank"><i class="icon-delivery"></i><?php echo $text_delivery_tracking; ?></a></li>
+						<li><a href="#" target="_blank"><i class="icon-register"></i><?php echo $text_register; ?></a></li>
+						<li><a href="#" target="_blank"><i class="icon-findpwd"></i><?php echo $text_forget_password; ?></a></li>
+						<li><a href="#" target="_blank"><i class="icon-shop"></i><?php echo $text_after_sale; ?></a></li>
 						</ul>
                 </div>
                 <div style="display: none;" class="guide-bd">
                     <dl class="help-menu clearfix">
-								<dt>账户管理</dt>
+                        		<?php foreach ($all_categories as $category) { ?>
+								<dt><?php echo $category['title']; ?></dt>
 								<dd>
 									<ul> 
-										<li><a target="_blank" href="#">帐号注册</a></li> 
-									 
-										<li><a target="_blank" href="#">帐号登录</a></li> 
-									 
-										<li><a target="_blank" href="#">找回密码</a></li> 
-									 
-										<li><a target="_blank" href="#">帐号信息管理</a></li> 
-									 
-										<li><a target="_blank" href="#">账户常见问题</a></li> 
+                                        <?php foreach ($all_articles[$category['category_id']] as $article) { ?>
+										<li><a target="_blank" href="<?php echo $article['link']; ?>"><?php echo $article['title']; ?></a></li> 
+                                        <?php } ?>
 									</ul>
 								</dd> 
+                        		<?php } ?>
                         </dl>
-                    <div class="guide-more"><a href="http://service.oneplus.cn/account/read" class=" f-red">查看更多&gt;&gt;</a></div>
+                    <div class="guide-more"><a href="#" class=" f-red">查看更多&gt;&gt;</a></div>
                 </div>
                 <div style="display: none;" class="guide-bd contact-card clearfix">
                    <ul class="service-card">
