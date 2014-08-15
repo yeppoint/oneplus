@@ -81,6 +81,7 @@ label {
 #content {
 	min-height: 400px;
 	margin-bottom: 25px;
+    padding: 0 50px;
 }
 #column-left + #column-right + #content, #column-left + #content {
 	margin-left: 195px;
@@ -455,6 +456,8 @@ label {
 	font-family: Verdana, Geneva, sans-serif;
 	display: block;
 }
+
+
 table.form {
 	width: 100%;
 	border-collapse: collapse;
