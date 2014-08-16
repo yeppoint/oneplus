@@ -12,6 +12,7 @@ class ControllerAccountAddress extends Controller {
 		$this->language->load('account/address');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/address');
 

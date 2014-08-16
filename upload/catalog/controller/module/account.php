@@ -20,6 +20,9 @@ class ControllerModuleAccount extends Controller {
 		$this->data['text_transaction'] = $this->language->get('text_transaction');
 		$this->data['text_newsletter'] = $this->language->get('text_newsletter');
 		$this->data['text_recurring'] = $this->language->get('text_recurring');
+		$this->data['text_my_orders']  = $this->language->get('text_my_orders');
+		$this->data['text_reward']  = $this->language->get('text_reward');
+		$this->data['text_my_newsletter'] = $this->language->get('text_my_newsletter');
 
 		$this->data['logged'] = $this->customer->isLogged();
 		$this->data['register'] = $this->url->link('account/register', '', 'SSL');
@@ -37,6 +40,7 @@ class ControllerModuleAccount extends Controller {
 		$this->data['transaction'] = $this->url->link('account/transaction', '', 'SSL');
 		$this->data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
 		$this->data['recurring'] = $this->url->link('account/recurring', '', 'SSL');
+		$this->data['reward']=$this->url->link('account/reward','','SSL');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/account.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/account.tpl';
