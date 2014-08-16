@@ -17,13 +17,13 @@ class ControllerClientServiceHelpCenter extends Controller {
         $this->data['breadcrumbs'][] = array(
             'href' => $this->url->link('clientservice/clientservice'),
             'text' => $this->language->get('text_clientservice'),
-            'separator' => ' / '
+            'separator' => $this->language->get('text_separator')
         );
         
         $this->data['breadcrumbs'][] = array(
             'href' => $this->url->link('clientservice/clientservice/helpcenter'),
             'text' => $this->language->get('text_helpcenter'),
-            'separator' => ' / '
+            'separator' => $this->language->get('text_separator')
         );
 
         
