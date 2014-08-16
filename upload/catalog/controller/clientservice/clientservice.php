@@ -26,6 +26,7 @@ class ControllerClientServiceClientService extends Controller {
         $this->data['text_register'] = $this->language->get('text_register');
         $this->data['text_forget_password'] = $this->language->get('text_forget_password');
         $this->data['text_after_sale'] = $this->language->get('text_after_sale');
+        $this->data['text_more'] = $this->language->get('text_more');
         
         $this->load->model('pavblog/category');
         $this->load->model('pavblog/blog');
@@ -41,8 +42,10 @@ class ControllerClientServiceClientService extends Controller {
                 $all_categories[] = $category;
             }
         }
+        
         $this->data['all_articles'] = $all_articles;
         $this->data['all_categories'] = $all_categories;
+        $this->data['link_more'] = $this->url->link('clientservice/helpcenter', '', 'SSL');
         
     	$this->template = 'default/template/clientservice/clientservice.tpl';
     	$this->children = array(

@@ -76,6 +76,7 @@
                     </div>
                 </div>
             </div>
+            <!--
             <div class="help-common fr">
                 <div class="common-qa">
                     <h3>常见问题</h3>
@@ -86,7 +87,7 @@
 				        <li><a title="一加商城的购物流程步骤是什么？" href="#">一加商城的购物流程步骤是什么？</a></li>
                     </ol>
                 </div> 
-            </div>            
+            </div> -->           
         </div>
     </div>
 </div>

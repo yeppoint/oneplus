@@ -25,10 +25,7 @@ class ControllerClientServiceHelpCenter extends Controller {
             'text' => $this->language->get('text_helpcenter'),
             'separator' => ' / '
         );
-        
-        if ($this->request->server['REQUEST_METHOD'] == 'GET' && isset($this->request->get['faq_id'])) {
-            $this->data['blog_id'] = (int)$this->request->get['faq_id'];
-        }
+
         
         $this->load->model('pavblog/category');
         $this->load->model('pavblog/blog');
@@ -38,14 +35,23 @@ class ControllerClientServiceHelpCenter extends Controller {
         
         $categories = $this->model_pavblog_category->getChild(1);
         
+       	$first = true; 
         foreach ($categories as $category) {
             $articles = $this->model_pavblog_blog->getSameCategory($category['category_id']);
             if ($articles) {
                 $this->injectUrlIntoArticles($articles);
+                if ($first) {
+                    $this->data['blog_id'] = $articles[0]['blog_id'];
+                    $first = false;
+                }
                 $all_articles[$category['category_id']] = $articles;
                 $all_categories[] = $category;
             }
         }
+         
+        if ($this->request->server['REQUEST_METHOD'] == 'GET' && isset($this->request->get['faq_id'])) {
+            $this->data['blog_id'] = (int)$this->request->get['faq_id'];
+        }       
         
         $this->data['all_articles'] = $all_articles;
         $this->data['all_categories'] = $all_categories;

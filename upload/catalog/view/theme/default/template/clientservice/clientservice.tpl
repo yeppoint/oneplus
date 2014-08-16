@@ -35,7 +35,7 @@
 								</dd> 
                         		<?php } ?>
                         </dl>
-                    <div class="guide-more"><a href="#" class=" f-red">查看更多&gt;&gt;</a></div>
+                    <div class="guide-more"><a href="<?php echo $link_more; ?>" class=" f-red"><?php echo $text_more; ?></a></div>
                 </div>
                 <div style="display: none;" class="guide-bd contact-card clearfix">
                    <ul class="service-card">
@@ -93,32 +93,18 @@
                 </div>
             </div>
 
+            <!--
             <div class="help-common fr">
-                <!-- 常见问题 -->
                 <div class="common-qa">
                     <h3>常见问题</h3>
                     <ol>
-				    					        <li><a title="未付款的订单会保存多久？" href="http://service.oneplus.cn/account/readOne/knowledgeId/A100000072">未付款的订单会保存多久？</a></li>
-				        				        <li><a title="什么情况下可以申请退换货？" href="http://service.oneplus.cn/account/readOne/knowledgeId/A100000033">什么情况下可以申请退换货？</a></li>
-				        				        <li><a title="一加商城支持哪些在线支付方式？" href="http://service.oneplus.cn/account/readOne/knowledgeId/A100000012">一加商城支持哪些在线支付方式？</a></li>
-				        				        <li><a title="一加商城的购物流程步骤是什么？" href="http://service.oneplus.cn/account/readOne/knowledgeId/A100000002">一加商城的购物流程步骤是什么？</a></li>
-				         
+				    	<li><a title="" href="">未付款的订单会保存多久？</a></li>
+				        <li><a title="" href="">什么情况下可以申请退换货？</a></li>
+				        <li><a title="" href="">一加商城支持哪些在线支付方式？</a></li>
+				        <li><a title="" href="">一加商城的购物流程步骤是什么？</a></li>
                     </ol>
                 </div> 
-	<script> 
-		$(function(){
-			$('.search-click').on('click',function(){ 
-				title=$(this).parent().find('.searchKey').eq(0).val();
-				location.href="http://service.oneplus.cn/account/search?title="+title; 
-			});
-			$(document).keydown(function(event){
-	            if(event.keyCode == 13){
-	                $('.search-click').trigger('click');
-	            }
-	        });
-		});
-    </script>            </div>
-            
+            </div> -->
         </div>
     </div> 
 </div>
