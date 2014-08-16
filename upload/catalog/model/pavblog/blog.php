@@ -49,15 +49,15 @@ class ModelPavblogBlog extends Model {
 	/**
 	 * get list of blogs in same category of current
 	 */
-	public function getSameCategory( $category_id, $blog_id, $limit=10 ){
+	public function getSameCategory( $category_id, /*$blog_id,*/ $limit=10 ){
 		$data = array(
 			'filter_category_id' => $category_id,
 
-			'not_in'           => $blog_id,
+			//'not_in'           => $blog_id,
 			'sort'               => 'created',
 			'order'              => 'DESC',
-			'start'              => 0,
-			'limit'              => $limit
+			//'start'              => 0,
+			//'limit'              => $limit
 		);
 
 		return $this->getListBlogs( $data );
@@ -105,7 +105,7 @@ class ModelPavblogBlog extends Model {
 	 */
 	public function getListBlogs( $data ){
 		
-		$sql = ' SELECT b.*,bd.title,bd.description,cd.title as category_title FROM '
+		$sql = ' SELECT b.*,bd.title,bd.description,bd.content,cd.title as category_title FROM '
 								. DB_PREFIX . "pavblog_blog b LEFT JOIN "
 								. DB_PREFIX . "pavblog_blog_description bd ON b.blog_id=bd.blog_id  and bd.language_id=".(int)$this->config->get('config_language_id')." LEFT JOIN "
 								. DB_PREFIX . 'pavblog_category c ON c.category_id=b.category_id  LEFT JOIN ' 
