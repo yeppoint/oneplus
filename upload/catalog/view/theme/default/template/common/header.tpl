@@ -100,7 +100,7 @@
                                 <a href="index.php?route=module/mainproduct/general" class="nav-name">产品浏览</a>
                             </li>
                             <li class="nav-li nav-li3">
-                                <a href="http://www.oneplus.cn/accessories" class="nav-name">产品配件</a>
+                                <a href="index.php?route=product/featured" class="nav-name">产品配件</a>
 
                             </li>
                             <li class="nav-li nav-li4">
