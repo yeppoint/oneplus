@@ -17,5 +17,5 @@ $_['text_account']      = '会员中心';
 $_['text_order']        = '历史订单';
 $_['text_wishlist']     = '收藏列表';
 $_['text_newsletter']   = '订阅咨询';
-$_['text_powered']      = '技术支持 <a href="http://www.opencartchina.com">OpenCart中国网站</a><br /> %s &copy; %s';
+$_['text_powered']      = '技术支持 <a href="http://www.YepPoint.com">YepPoint</a>&copy; %s';
 ?>

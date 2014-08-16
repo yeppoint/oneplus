@@ -1,54 +1,79 @@
-<?php echo $header; ?>
-<?php if ($success) { ?>
-<div class="success"><?php echo $success; ?></div>
-<?php } ?>
-<?php if ($error_warning) { ?>
-<div class="warning"><?php echo $error_warning; ?></div>
-<?php } ?>
-<?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
-  </div>
-  <h1><?php echo $heading_title; ?></h1>
-  <div class="login-content">
-    <div class="left">
-      <h2><?php echo $text_new_customer; ?></h2>
-      <div class="content">
-        <p><b><?php echo $text_register; ?></b></p>
-        <p><?php echo $text_register_account; ?></p>
-        <a href="<?php echo $register; ?>" class="button"><?php echo $button_continue; ?></a></div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>账户登录</title>
+    <link rel="shortcut icon" href="<?php if($icon)echo $icon;?>" type="image/x-icon">
+    <link rel="stylesheet" href="catalog/view/css/init.css" media="screen">
+    <link rel="stylesheet" href="catalog/view/css/common.css" media="screen">
+    <link rel="stylesheet" href="catalog/view/css/account.css" media="screen">
+    <script src="catalog/view/javascript/jquery/jquery-1.9.1.js"></script>
+    <script src="catalog/view/javascript/respond.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://statics.oneplus.cn/js/lib/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body class="o-ta-l">
+<header>
+    <h1>
+        <a href="index.php"><img src="<?php if(isset($logo)&&$logo)echo $logo; ?>"  class="o-f-l"></a>
+        <nav class="o-ta-r nav-t">
+                </nav>
+        <strong class="o-ta-r"><?php echo $text_welcome; ?></strong>
+    </h1>
+</header>
+    <section class="main">
+    <div class="main main-login">
+        <form class="form-login">
+            <ul class="o-mt-150 o-mb-150">
+                <li><label><?php echo $text_username; ?>：</label><input name="account"  type="text" value="" placeholder="<?php echo $text_email; ?>" id="userAccount"></li>
+                <li><label><?php echo $text_password; ?>：</label><input name="password" type="password" value="" placeholder="<?php echo $text_password; ?>" id="password"></li>
+                <li id="verifyLi" class=""><label><?php echo $text_captcha; ?>：</label><input name="imgValidCode" type="text" value="" placeholder="<?php echo $text_captcha; ?>" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
+                <li class="tips"><label class="o-ti-999">　提　示：</label><span class="validate_tip">&nbsp;</span></li>
+                <li style="visibility:hidden" class="rememberme"><a href="#" class="o-ml-30">[忘记密码]</a></li>
+                <li class="btns"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-login"><?php echo $text_login; ?></a><a href="index.php?route=account/register" class="btn btn-shop-gray btn-shop-m o-ml-10"><?php echo $text_register; ?></a></li>
+            </ul>
+        </form>
     </div>
-    <div class="right">
-      <h2><?php echo $text_returning_customer; ?></h2>
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-        <div class="content">
-          <p><?php echo $text_i_am_returning_customer; ?></p>
-          <b><?php echo $entry_email; ?></b><br />
-          <input type="text" name="email" value="<?php echo $email; ?>" />
-          <br />
-          <br />
-          <b><?php echo $entry_password; ?></b><br />
-          <input type="password" name="password" value="<?php echo $password; ?>" />
-          <br />
-          <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a><br />
-          <br />
-          <input type="submit" value="<?php echo $button_login; ?>" class="button" />
-          <?php if ($redirect) { ?>
-          <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-          <?php } ?>
-        </div>
-      </form>
-    </div>
-  </div>
-  <?php echo $content_bottom; ?></div>
-<script type="text/javascript"><!--
-$('#login input').keydown(function(e) {
-	if (e.keyCode == 13) {
-		$('#login').submit();
-	}
-});
-//--></script> 
-<?php echo $footer; ?>
+</section>
+
+<script>
+     
+    $(function(){
+        //点击时更换图形验证码
+        $("#imgCode").on("click",function(){
+            this.src = "index.php?route=tool/captcha#"+Math.random();
+        });
+
+        $('#btn-login').click(function(event) {
+             $.post('index.php?route=account/login',{
+                email:$('#userAccount').val(),
+                password:$('#password').val(),
+                captcha:$('#imgValidCode').val()
+             },function(json){
+                if(json.warning){
+                     $(".validate_tip").text(json.warning);
+                }else{
+                    location = json.redirect;
+                }
+             });
+        });
+        
+        //回车登录
+        $(document).keydown(function(event){
+            if(event.keyCode == 13){
+                $('#btn-login').trigger('click');
+            }
+        });
+    });
+</script>
+<footer>
+    <address>
+        <p class="o-ta-c">ICP &copy; 2014 深圳市创尔科科技有限公司 版权所有</p>
+    </address>
+</footer>
+
+ 
+</body>
+</html>

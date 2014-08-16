@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0
+}
+#phaccsect1 {
+    margin-top: 40px;
+    margin-bottom: 40px
+}
+.phacc_h2 {
+    border-bottom: 1px solid #dad8d6;
+    position: relative;
+    height: 27px;
+    _height: 28px;
+    line-height: 27px;
+    margin-bottom: 20px;
+    text-align: left
+}
+.phacc_h2 div {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0
+}
+.phacc_h2 span {
+    display: block;
+    height: 26px;
+    padding: 0 14px 0 3px;
+    color: #eb0028;
+    margin-right: 10px;
+    border-bottom: 2px solid #eb0028
+}
+.phaccul_1 {
+    width: 100%
+}
+.phaccul_1 li {
+    float: left;
+    position: relative
+}
+.phaccul_1 li img {
+    max-width: 100%
+}
+.phaccul_li01, .phaccul_li02 {
+    width: 33.3333%;
+    *width: 33.3%;
+    height: 307px
+}
+.phaccul_li02 {
+    height: 614px
+}
+.phaccul_li03 {
+    width: 66.6666%;
+    *width: 66.55%;
+    height: 307px
+}
+.phaccul_1 li div {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #dad8d6
+}
+.phaccul_1 li div:hover {
+    outline: 3px solid #dad8d6;
+    z-index: 2
+}
+.phaccul_1 li.hotp .hottag {
+    width: 51px;
+    height: 54px;
+    padding-top: 5px;
+    display: block;
+    background: #eb0028;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 22px
+}
+.phaccul_1 li div img {
+    transition: all .2s ease-in-out 0s;
+    -moz-transition: all .2s ease-in-out 0s;
+    -webkit-transition: all .2s ease-in-out 0s;
+    -o-transition: all .2s ease-in-out 0s
+}
+.phaccul_1 li div:hover img {
+    transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05)
+}
+.phaccul_1 li div.nobrdr {
+    border-right: none
+}
+.phaccul_1 li div.nobrdb {
+    border-bottom: none
+}
+.phaccul_1 .phaccul_li01 div, .phaccul_1 .phaccul_li03 div {
+    height: 306px
+}
+.phaccul_1 .phaccul_li02 div {
+    height: 613px
+}
+.phaccul_1 .phaccul_li01 div figure {
+    padding-top: 32px;
+    height: 224px
+}
+.phaccul_1 .phaccul_li02 div figure {
+    padding-top: 70px;
+    height: 456px
+}
+.phaccul_1 li figcaption {
+    font-size: .875em;
+    display: block;
+    position: relative;
+    z-index: 5
+}
+.phaccul_1 li figcaption a:hover {
+    color: #000
+}
+.phaccul_1 li figcaption em {
+    font-style: normal;
+    font-weight: 400;
+    display: block
+}
+.phaccul_1 .phaccul_li03 figcaption {
+    width: 160px;
+    float: left;
+    position: relative;
+    top: 130px;
+    left: 70px
+}
+.coloriconbar, .coloriconbar2 {
+    width: 63px;
+    height: 12px;
+    overflow: hidden;
+    display: block;
+    margin: 8px auto
+}
+.coloriconbar {
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -166px
+}
+.coloriconbar2 {
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -181px
+}
+#phaccnav1 {
+    height: 24px;
+    margin-bottom: 20px;
+    display: none
+}
+#phaccnav1 li {
+    height: 24px;
+    cursor: pointer;
+    line-height: 24px;
+    float: left;
+    margin-right: 16px;
+    padding: 0 16px
+}
+#phaccnav1 li.now {
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #eb0028;
+    color: #eb0028
+}
+#phaccnav1 li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px
+}
+.phaccul_2 li {
+    width: 25%;
+    *width: 24.6%;
+    height: 375px;
+    float: left;
+    margin-bottom: 20px
+}
+.innerdiv {
+    height: 343px;
+    padding-top: 32px;
+    border-right: 1px solid #e6e6e6
+}
+.innerdiv:hover {
+    outline: 4px solid #dad8d6;
+    position: relative;
+    z-index: 2
+}
+div.nbr {
+    border-right: none
+}
+.phaccul_2 li .accepica {
+    width: 250px;
+    display: block;
+    margin: 0 auto 30px
+}
+.phaccul_2 li img {
+    width: 100%
+}
+.phaccul_2 .innerdiv h4 {
+    font-size: .875em;
+    font-weight: 400
+}
+.phaccul_2 .innerdiv h4 em {
+    font-weight: 400;
+    display: block
+}
+.phaccul_2 .funbox {
+    height: 50px;
+    overflow: hidden
+}
+.phaccul_2 .funbox h4 {
+    position: relative
+}
+.phaccul_2 .funbox .funbin {
+    width: 125px;
+    height: 38px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    top: 51px
+}
+.phaccul_2 .funbin a {
+    width: 125px;
+    height: 38px;
+    margin: 0 auto;
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -120px;
+    display: none
+}
+.phaccul_2 .funbin span {
+    width: 125px;
+    height: 38px;
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -120px;
+    display: none
+}
+.phaccul_2 .funbin .success {
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 0
+}
+.phaccul_2 .funbin .failure {
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -40px
+}
+.phaccul_2 .funbin .sellout {
+    background: url(../../img/phoneaccessories/list/btns2.png) 0 -80px
+}
+.phaccul_2 .showa a.btns1, .phaccul_2 .showf span.failure, .phaccul_2 .shows span.success, .phaccul_2 .showst span.sellout {
+    display: block
+}
+@media screen and (max-width: 1130px) {
+    .phaccul_2 li .accepica {
+        width: 100%
+    }
+}

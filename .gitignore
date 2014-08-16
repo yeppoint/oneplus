@@ -24,6 +24,11 @@
 
 !/upload/data/index.html
 
+# vQmod  Files
+/upload/vqmod/mods.cache
+/upload/vqmod/logs
+/upload/vqmod/vqcache
+
 # Flags 
 # remove sharp char if you want to add flags to gitignore
 # /upload/flags/*
@@ -39,4 +44,5 @@
 # Linux temp file
 *.*~
 
-
+# .idea
+.idea/

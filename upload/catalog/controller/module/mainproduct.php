@@ -1,6 +1,9 @@
 <?php
 
 class ControllerModuleMainproduct extends Controller {
+    /**
+     * 要结合general func design attribute使用
+     */
     public function index() {
         $this->load->language('module/mainproduct');
         $this->data['text_general'] = $this->language->get('text_general');
@@ -24,6 +27,8 @@ class ControllerModuleMainproduct extends Controller {
             $mainproduct['attribute_description'] = html_entity_decode($mainproduct_setting['attribute-description'][$code], ENT_QUOTES, 'UTF-8');
             $this->data['mainproduct'] = $mainproduct;
         }
+
+        $this->data['description'] =  $mainproduct['general_description'] ;
         
         if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . 'template/module/mainproduct.tpl')) {
             $this->template = $this->config->get('config_template') . 'template/module/mainproduct.tpl';
@@ -34,9 +39,31 @@ class ControllerModuleMainproduct extends Controller {
         $this->children = array(
             'common/header',
             'common/footer'
-        );
-        
-        return $this->response->setOutput($this->render());
+        );       
+    }
+
+    public function general(){
+            $this->index();
+            $this->data['description'] = $this->data['mainproduct']['general_description'];
+            return $this->response->setOutput($this->render());
+    }
+
+    public  function func(){
+            $this->index();
+            $this->data['description'] = $this->data['mainproduct']['function_description'];
+            return $this->response->setOutput($this->render());
+    }
+
+    public function design(){
+            $this->index();
+            $this->data['description'] = $this->data['mainproduct']['design_description'];
+            return $this->response->setOutput($this->render());
+    }
+
+    public function attribute(){
+            $this->index();
+            $this->data['description'] = $this->data['mainproduct']['attribute_description'];
+            return $this->response->setOutput($this->render());
     }
 }
 
