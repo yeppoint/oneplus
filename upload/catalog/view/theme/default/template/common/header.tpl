@@ -104,7 +104,7 @@
 
                             </li>
                             <li class="nav-li nav-li4">
-                                <a href="http://service.oneplus.cn" class="nav-name">客户服务</a>
+                                <a href="<?php echo $clientservice; ?>" class="nav-name"><?php echo $text_clientservice; ?></a>
                             </li>
                             <li class="nav-li nav-li4">
                                 <a href="http://support.oneplus.cn" class="nav-name">技术支持</a>

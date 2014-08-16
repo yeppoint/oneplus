@@ -16,7 +16,6 @@
     user-select: none
 }
 body, html {
-    text-align: center;
     font-size: 16px;
     line-height: 1.2em
 }
@@ -1003,7 +1002,7 @@ em, i {
 .breadcrumbs {
     line-height: 20px;
     font-size: .75em;
-    margin: 16px auto 34px
+    margin: 16px auto 34px;
 }
 .breadcrumbs .container {
     text-align: left
