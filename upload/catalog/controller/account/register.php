@@ -24,6 +24,7 @@ class ControllerAccountRegister extends Controller {
         }   
 
         $this->load->language('account/register');
+        $this->document->addStyle('catalog/view/css/member.css');
 
         $this->data['text_email_register'] = $this->language->get('text_email_register');
         $this->data['entry_email'] = $this->language->get('entry_email');

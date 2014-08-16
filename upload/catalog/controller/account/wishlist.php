@@ -8,6 +8,7 @@ class ControllerAccountWishList extends Controller {
 		}
 
 		$this->language->load('account/wishlist');
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('catalog/product');
 

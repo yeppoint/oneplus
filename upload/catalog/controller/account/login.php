@@ -4,6 +4,7 @@ class ControllerAccountLogin extends Controller {
 
 	public function index() {
         $this->load->language('account/login');
+        $this->document->addStyle('catalog/view/css/member.css');
         //logo and icon
         if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
             $server = $this->config->get('config_ssl');
