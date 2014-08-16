@@ -1,5 +1,4 @@
 <?php
-require "kint/Kint.class.php";
 // Version
 define('VERSION', '1.5.6.5_rc');
 

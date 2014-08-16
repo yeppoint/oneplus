@@ -61,17 +61,19 @@
                             </li>
                             <li class="nav-t nav-login" id="nav-login">
                                 <div class="nav-name nav-login-t">
-                                                                <span>
-                                        <i class="icon-user"></i>
-                                        <a href="index.php?route=account/login" id="glogin" class="t">登录</a> /
-                                        <a href="index.php?route=account/register" id="gregist" class="t">注册</a>
+                                     <span>
+                              <?php if (!$logged) { ?>
+                              <?php echo $text_welcome; ?>
+                               <?php } else { ?>
+                               <?php echo $text_logged; ?>
+                               <?php } ?>
                                     </span>
                                 </div>
                             </li>
                             <li class="nav-t nav-cart" id="nav-cart">
                                 <div class="nav-name nav-cart-t">
                                 <span class="anchor t">
-                                    <a href="http://www.oneplus.cn/cart/index" class="t"><i class="icon-cart"></i>购物车<em class="cartNum" style="display:none"></em></a>
+                                    <a href="<?php echo $shopping_cart;?>" class="t"><i class="icon-cart"></i><?php echo $text_shopping_cart;?><em class="cartNum" style="display:none"></em></a>
                                 </span>
                                     <div class="ddl-cartbox" id="minicart" style="display:none;">
                                         <div class="loading">购物车加载中...</div>
