@@ -10,6 +10,7 @@ class ControllerAccountDownload extends Controller {
 		$this->language->load('account/download');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->data['breadcrumbs'] = array();
 

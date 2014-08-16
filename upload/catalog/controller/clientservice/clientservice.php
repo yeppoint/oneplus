@@ -15,7 +15,7 @@ class ControllerClientServiceClientService extends Controller {
         $this->data['breadcrumbs'][] = array(
             'href' => $this->url->link('clientservice/clientservice'),
             'text' => $this->language->get('text_clientservice'),
-            'separator' => ' / '
+            'separator' => $this->language->get('text_separator')
         );
         
         $this->data['text_selfservice'] = $this->language->get('text_selfservice');

@@ -10,6 +10,7 @@ class ControllerAccountOrder extends Controller {
 		}
 
 		$this->language->load('account/order');
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/order');
 

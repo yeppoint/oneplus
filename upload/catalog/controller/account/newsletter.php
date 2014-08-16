@@ -10,6 +10,7 @@ class ControllerAccountNewsletter extends Controller {
 		$this->language->load('account/newsletter');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
 			$this->load->model('account/customer');

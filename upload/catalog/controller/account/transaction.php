@@ -10,6 +10,7 @@ class ControllerAccountTransaction extends Controller {
 		$this->language->load('account/transaction');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->data['breadcrumbs'] = array();
 

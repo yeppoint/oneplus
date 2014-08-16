@@ -12,6 +12,7 @@ class ControllerAccountEdit extends Controller {
 		$this->language->load('account/edit');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/customer');
 
