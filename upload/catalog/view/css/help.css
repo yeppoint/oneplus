@@ -127,7 +127,7 @@
 }
 .self-help li i
 {
-	background: url("http://statics.oneplus.cn/img/help/help-icon.png") -10px -10px no-repeat;
+	background: url("../../../image/data/help/help-icon.png") -10px -10px no-repeat;
 	display: block;
 	height: 90px;
 	margin: 5px auto;
@@ -213,7 +213,7 @@
 }
 .searchArea
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -13px -23px no-repeat;
+	background: url(../../../image/data/help/help.png) -13px -23px no-repeat;
 	display: block;
 	font-size: .875em;
 	height: 40px;
@@ -321,7 +321,7 @@
 .service-card li i
 {
 	_margin: 0 10px;
-	background: url(http://statics.oneplus.cn/img/help/help-icon.png) -40px -207px no-repeat;
+	background: url(../../../image/data/help/help-icon.png) -40px -207px no-repeat;
 	display: block;
 	height: 115px;
 	margin: 0 20px;
@@ -377,11 +377,11 @@
 }
 .service-card .icon-remote
 {
-	background: url(http://statics.oneplus.cn/img/help/help-icon.png) -89px 28px no-repeat;
+	background: url(../../../image/data/help/help-icon.png) -89px 28px no-repeat;
 }
 .service-card a:hover .icon-remote
 {
-	background: url(http://statics.oneplus.cn/img/help/help-icon.png) -92px -83px no-repeat;
+	background: url(../../../image/data/help/help-icon.png) -92px -83px no-repeat;
 }
 .service-card .icon-qq
 {
@@ -451,7 +451,7 @@ html
 }
 .hd-close-btn
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -267px -207px;
+	background: url(../../../image/data/help/help.png) -267px -207px;
 	display: block;
 	height: 23px;
 	position: absolute;
@@ -470,7 +470,7 @@ html
 }
 .hd-tel-box .icon-help-tel
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -239px -257px;
+	background: url(../../../image/data/help/help.png) -239px -257px;
 	display: block;
 	height: 66px;
 	margin: 0 auto 6px;
@@ -518,7 +518,7 @@ html
 }
 .hd-weixin-box .icon-help-weixin
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -3px -250px no-repeat;
+	background: url(../../../image/data/help/help.png) -3px -250px no-repeat;
 	display: block;
 	height: 184px;
 	margin: 24px auto 22px;
@@ -712,7 +712,7 @@ html
 }
 .help-nav .nav-category .arrow
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) no-repeat;
+	background: url(../../../image/data/help/help.png) no-repeat;
 	display: inline-block;
 	height: 9px;
 	position: absolute;
@@ -801,11 +801,11 @@ html
 }
 .help-sub-content .title-bar .arrow-minus
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -183px -133px no-repeat;
+	background: url(../../../image/data/help/help.png) -183px -133px no-repeat;
 }
 .help-sub-content .title-bar .arrow-plus
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -269px -134px no-repeat;
+	background: url(../../../image/data/help/help.png) -269px -134px no-repeat;
 }
 .help-sub-content .sub-content-bd .text-box
 {
@@ -875,7 +875,7 @@ html
 }
 .bad-answer-reason .selBg
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -8px -206px no-repeat;
+	background: url(../../../image/data/help/help.png) -8px -206px no-repeat;
 	display: block;
 	height: 30px;
 	width: 185px;
@@ -944,7 +944,7 @@ html
 }
 .service-head .head-right .btn-change
 {
-	background: url(http://statics.oneplus.cn/img/help/help-servicepot.png) -45px -65px no-repeat;
+	background: url(../../../image/data/help/help-servicepot.png) -45px -65px no-repeat;
 	color: #39c;
 	padding-right: 25px;
 }
@@ -998,7 +998,7 @@ html
 }
 .shop-map .map-traffic
 {
-	background: url(http://statics.oneplus.cn/img/help/help-servicepot.png) -74px -21px no-repeat;
+	background: url(../../../image/data/help/help-servicepot.png) -74px -21px no-repeat;
 	border: 0;
 	color: #fff;
 	float: left;
@@ -1084,7 +1084,7 @@ html
 }
 .shop-address .city-switch .btn-close
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -258px -200px no-repeat;
+	background: url(../../../image/data/help/help.png) -258px -200px no-repeat;
 	height: 40px;
 	position: absolute;
 	right: 0;
@@ -1150,7 +1150,7 @@ html
 }
 .support-float-block .intro-image
 {
-	background: url(http://statics.oneplus.cn/img/help/support-yijia.jpg) center center no-repeat;
+	background: url(../../../image/data/help/support-yijia.jpg) center center no-repeat;
 	height: 500px;
 	margin: auto;
 	position: relative;
@@ -1172,7 +1172,7 @@ html
 }
 .support-float-block .intro-image a
 {
-	background: url(http://statics.oneplus.cn/img/help/help.png) -195px -88px no-repeat;
+	background: url(../../../image/data/help/help.png) -195px -88px no-repeat;
 	display: block;
 	height: 25px;
 	left: 40px;
@@ -1221,7 +1221,7 @@ html
 }
 .intro-image .doctor-icon
 {
-	background: url(http://statics.oneplus.cn/img/help/doc-box.png) no-repeat;
+	background: url(../../../image/data/help/doc-box.png) no-repeat;
 	display: block;
 	height: 110px;
 	left: 205px;
@@ -1346,7 +1346,7 @@ html
 }
 .intro-feature li i
 {
-	background: url(http://statics.oneplus.cn/img/help/help-icon.png) -180px -265px no-repeat;
+	background: url(../../../image/data/help/help-icon.png) -180px -265px no-repeat;
 	display: block;
 	height: 146px;
 	margin-bottom: 20px;
