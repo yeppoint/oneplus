@@ -62,4 +62,13 @@ $_['error_captcha']       = '警告： 验证码与图像提供的验证码不�
 $_['error_upload']        = '上传失败！';
 $_['error_filename']      = '文件名必须在3-64个字节！';
 $_['error_filetype']      = '文件类型不支持！';
+
+//New
+$_['text_price']                     = '价格:';
+$_['text_quantity']                  = '数量:';
+$_['text_available_options']         = '可选';
+$_['text_add_to_cart']               = '加入购物车';
+$_['text_product_decription']        = '商品详情';
+$_['text_product_attributes']        = '规格参数';
+$_['text_faq']                       = '常见问题';
 ?>
