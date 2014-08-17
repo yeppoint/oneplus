@@ -26,13 +26,13 @@
           <h1 class="p-title"><?php echo $product_name;?></h1>
           <p class="p-des"><a href="#"></a></p>
                 <div class="p-price">
-                    <label class="s-title2">价格：</label><strong><?php echo $price;?></strong>
+                    <label class="s-title2"><?php echo $text_price;?></label><strong><?php echo $price;?></strong>
                 </div>
 
                 <!--option属性-->
                 <div class="p-capacity">
                     <?php if(isset($options) && isset($options['option_value'])){ ?>
-                        <h2 class="p-tr-title">Available Options</h2>
+                        <h2 class="p-tr-title"><?php echo $text_available_options;?></h2>
                         <dl class="p-tr cf">
                           <?php foreach ($options['option_value'] as $option_value) { ?>
                              <dd>
@@ -44,7 +44,7 @@
                 </div>
               
                 <div class="p-qty new-qty cf">
-                    <label class="s-title2">数量：</label>
+                    <label class="s-title2"><?php echo $text_quantity;?></label>
                     <div class="box-qty-new">
                         <span class="i-minus"></span>
                         <span class="i-qty" style="-moz-user-select:none;" onselectstart="return false;">1</span>
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="p-bbtn cf">
-                    <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="加入购物车" >
+                    <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
 
     <article>
         <div class="as-detail container">
-            <ul class="as-detail-nav">
-                <li class="f"><a href="<?php echo $product_url;?>#anchor-pic">商品详情</a></li>
-                <li class="s"><a href="<?php echo $product_url;?>#anchor-spec">规格参数</a></li>
-                <li class="l"><a href="<?php echo $product_url;?>#anchor-question">常见问题</a></li>
+            <ul class="as-detail-nav">  
+                <li class="f"><a href="<?php echo $product_url;?>#anchor-pic"><?php echo $text_product_decription;?></a></li>
+                <li class="s"><a href="<?php echo $product_url;?>#anchor-spec"><?php echo $text_product_attributes;?></a></li>
+                <li class="l"><a href="<?php echo $product_url;?>#anchor-question"><?php echo $text_faq;?></a></li>
             </ul>
             <!--商品详情-->
              <a name="anchor-pic"></a>
@@ -76,7 +76,7 @@
             <section>
              
               <div class="box as-detail-spec" >
-                    <h2 >规格参数</h2>
+                    <h2 ><?php echo $text_product_attributes;?></h2>
                     <div class="c cf p-info-list">
                       <?php foreach ($attrs as $attr) { ?>
                          <div class="phone-info">
@@ -97,7 +97,7 @@
             <section>
                
                 <div class="box as-detail-question" >
-                    <h2>常见问题</h2>
+                    <h2><?php echo $text_faq;?></h2>
                     <div class="c cf">
                         <dl>
                             <dt>Not things</dt>

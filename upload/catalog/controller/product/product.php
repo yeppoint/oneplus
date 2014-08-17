@@ -5,6 +5,14 @@ class ControllerProductProduct extends Controller {
 	public function index() {
 		$this->language->load('product/product');
 
+		$this->data['text_price'] = $this->language->get('text_price');
+		$this->data['text_quantity'] = $this->language->get('text_quantity');
+		$this->data['text_available_options'] = $this->language->get('text_available_options');
+		$this->data['text_add_to_cart'] = $this->language->get('text_add_to_cart');
+		$this->data['text_product_decription'] = $this->language->get('text_product_decription');
+		$this->data['text_product_attributes'] = $this->language->get('text_product_attributes');
+		$this->data['text_faq'] = $this->language->get('text_faq');
+
 
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
