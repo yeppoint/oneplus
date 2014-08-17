@@ -1,42 +1,59 @@
-<?php echo $header; ?>
-<?php if ($success) { ?>
-<div class="success"><?php echo $success; ?></div>
-<?php } ?>
-<?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
+<?php echo $header; ?>  
+<div class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
+<?php if ($error_warning) { ?>
+<div class="warning"><?php echo $error_warning; ?></div>
+<?php } ?>
+<?php echo $column_left; ?><?php echo $column_right; ?>
+<div id="content"><?php echo $content_top; ?>
   <h1><?php echo $heading_title; ?></h1>
-  <h2><?php echo $text_my_account; ?></h2>
-  <div class="content">
-    <ul>
-      <li><a href="<?php echo $edit; ?>"><?php echo $text_edit; ?></a></li>
-      <li><a href="<?php echo $password; ?>"><?php echo $text_password; ?></a></li>
-      <li><a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></li>
-      <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-    </ul>
-  </div>
-  <h2><?php echo $text_my_orders; ?></h2>
-  <div class="content">
-    <ul>
-      <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-      <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-      <?php if ($reward) { ?>
-      <li><a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></li>
-      <?php } ?>
-      <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-      <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-      <li><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
-    </ul>
-  </div>
-  <h2><?php echo $text_my_newsletter; ?></h2>
-  <div class="content">
-    <ul>
-      <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-    </ul>
-  </div>
+  <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+    <h2><?php echo $text_your_details; ?></h2>
+    <div class="content">
+      <table class="form">
+        <tr>
+          <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
+          <td><input type="text" name="firstname" value="<?php echo $firstname; ?>" />
+            <?php if ($error_firstname) { ?>
+            <span class="error"><?php echo $error_firstname; ?></span>
+            <?php } ?></td>
+        </tr>
+        <tr>
+          <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
+          <td><input type="text" name="lastname" value="<?php echo $lastname; ?>" />
+            <?php if ($error_lastname) { ?>
+            <span class="error"><?php echo $error_lastname; ?></span>
+            <?php } ?></td>
+        </tr>
+        <tr>
+          <td><span class="required">*</span> <?php echo $entry_email; ?></td>
+          <td><input type="text" name="email" value="<?php echo $email; ?>" />
+            <?php if ($error_email) { ?>
+            <span class="error"><?php echo $error_email; ?></span>
+            <?php } ?></td>
+        </tr>
+        <tr>
+          <td><span class="required">*</span> <?php echo $entry_telephone; ?></td>
+          <td><input type="text" name="telephone" value="<?php echo $telephone; ?>" />
+            <?php if ($error_telephone) { ?>
+            <span class="error"><?php echo $error_telephone; ?></span>
+            <?php } ?></td>
+        </tr>
+        <tr>
+          <td><?php echo $entry_fax; ?></td>
+          <td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
+        </tr>
+      </table>
+    </div>
+    <div class="buttons">
+      <div class="left"><a href="<?php echo $back; ?>" class="button"><?php echo $button_back; ?></a></div>
+      <div class="right">
+        <input type="submit" value="<?php echo $button_continue; ?>" class="button" />
+      </div>
+    </div>
+  </form>
   <?php echo $content_bottom; ?></div>
-<?php echo $footer; ?> 
+<?php echo $footer; ?>

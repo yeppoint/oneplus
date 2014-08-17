@@ -12,6 +12,7 @@ class ControllerAccountAddress extends Controller {
 		$this->language->load('account/address');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/address');
 
@@ -30,6 +31,7 @@ class ControllerAccountAddress extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('account/address');
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_account_address->addAddress($this->request->post);
@@ -52,6 +54,7 @@ class ControllerAccountAddress extends Controller {
 		$this->language->load('account/address');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/address');
 
@@ -95,6 +98,7 @@ class ControllerAccountAddress extends Controller {
 		$this->language->load('account/address');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		$this->load->model('account/address');
 

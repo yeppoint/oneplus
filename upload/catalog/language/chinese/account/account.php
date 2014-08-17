@@ -3,11 +3,11 @@
  * $Author: http://www.opencartchina.com 
 **/
 // Heading 
-$_['heading_title']      = '我的账户';
+$_['heading_title']      = '用户中心首页';
 
 // Text
-$_['text_account']       = '我的账户';
-$_['text_my_account']    = '我的账户';
+$_['text_account']       = '个人中心';
+$_['text_my_account']    = '个人中心';
 $_['text_my_orders']     = '我的订单';
 $_['text_my_newsletter'] = '我的订阅';
 $_['text_edit']          = '编辑我的账户信息';
