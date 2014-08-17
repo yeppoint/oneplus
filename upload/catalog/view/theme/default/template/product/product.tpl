@@ -53,7 +53,6 @@
                 </div>
 
                 <div class="p-bbtn cf">
-                    <input type="hidden" id="goodsCode" value="0101010601" />
                     <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="加入购物车" >
                 </div>
             </div>
@@ -145,17 +144,21 @@
             type: 'POST',
             dataType:'json',
             data: post_data,
+            beforeSend:function(){
+              $('#addCartBtn').fadeOut(500);
+            }
            
           })
           .done(function(json) {
-            console.log(json);
-             
+             $('#addCartBtn').fadeIn(500);
           })
           .fail(function() {
-            console.log("error");
+            alert("Please check your network");
+            $('#addCartBtn').fadeIn(500);
           });
+         
           
-
+          
         });
         //option value
         $('.p-td').on('click',function(){
