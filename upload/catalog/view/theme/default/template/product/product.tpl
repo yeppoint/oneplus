@@ -28,19 +28,19 @@
                 <div class="p-price">
                     <label class="s-title2">价格：</label><strong><?php echo $price;?></strong>
                 </div>
-         
-                <!--规格属性-->
+
+                <!--option属性-->
                 <div class="p-capacity">
-                      <h2 class="p-tr-title">Available Options</h2>
-                      <dl class="p-tr cf">
-                        <?php foreach ($options['option_value'] as $option_value) { ?>
-                           <dd>
-                            <a class="p-td"><i></i><?php echo $option_value['name']; ?></a>
-                          </dd>
-                        <?php }?>
-                        
- 
-                    </dl>
+                    <?php if(isset($options) && isset($options['option_value'])){ ?>
+                        <h2 class="p-tr-title">Available Options</h2>
+                        <dl class="p-tr cf">
+                          <?php foreach ($options['option_value'] as $option_value) { ?>
+                             <dd>
+                                <a class="p-td" name="<?php echo $options['product_option_id']; ?>" id="<?php echo $option_value['product_option_value_id']; ?>"><i></i><?php echo $option_value['name']; ?></a>
+                            </dd>
+                          <?php }?>
+                        </dl>
+                    <?php }?>
                 </div>
               
                 <div class="p-qty new-qty cf">
@@ -122,10 +122,40 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-       
+        //init
+        if($('.p-td').length>0){
+          $('.p-td:first').addClass('sel');
+        }
 
         $("#addCartBtn").on("click", function() {
-           alert('add to cart..');
+           
+            var post_data = {
+              "quantity":parseInt($('.i-qty').text()),
+              "product_id":<?php echo $product_id;?>,
+               <?php if(isset($options) && isset($options['option_value'])){ ?>
+                  "option":{
+                    "<?php echo $options['product_option_id']; ?>":parseInt($('a.sel').attr('id'))
+                   }
+                  
+              <?php }?>
+            }
+
+          $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'POST',
+            dataType:'json',
+            data: post_data,
+           
+          })
+          .done(function(json) {
+            console.log(json);
+             
+          })
+          .fail(function() {
+            console.log("error");
+          });
+          
+
         });
         //option value
         $('.p-td').on('click',function(){

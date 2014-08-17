@@ -55,13 +55,13 @@
                             <li class="nav-t nav-login" id="nav-login">
                                 <div class="nav-name nav-login-t">
                                     <span>
-                     <?php echo $language; ?>
+                                         <?php echo $language; ?>
                                     </span>
                                 </div>
                             </li>
                             <li class="nav-t nav-login" id="nav-login">
                                 <div class="nav-name nav-login-t">
-                                                                <span>
+                                    <span>
                                         <i class="icon-user"></i>
                                         <a href="index.php?route=account/login" id="glogin" class="t">登录</a> /
                                         <a href="index.php?route=account/register" id="gregist" class="t">注册</a>
@@ -70,28 +70,11 @@
                             </li>
                             <li class="nav-t nav-cart" id="nav-cart">
                                 <div class="nav-name nav-cart-t">
-                                <span class="anchor t">
-                                    <a href="http://www.oneplus.cn/cart/index" class="t"><i class="icon-cart"></i>购物车<em class="cartNum" style="display:none"></em></a>
-                                </span>
-                                    <div class="ddl-cartbox" id="minicart" style="display:none;">
-                                        <div class="loading">购物车加载中...</div>
-                                        <ul class="ddl-cart"></ul>
-                                        <div class="b-btn">
-                                            <div class="block cf">
-                                                <ul class="b-l">
-                                                    <li class="qty">共计<em>0</em>件商品</li>
-                                                    <li class="sum">合计：<em>0</em>元</li>
-                                                </ul>
-                                                <div class="b-r">
-                                                    <a href="http://www.oneplus.cn/cart/index" class="btn btn-shop-red btn-shop-m">去结算</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span class="anchor t">
+                                        <a href="index.php?route=checkout/checkout" class="t"><i class="icon-cart"></i>购物车<em class="cartNum" style="display:none"></em></a>
+                                    </span>
                                 </div>
                             </li>
-
-
                         </ul>
                     </div>
                     <nav>
