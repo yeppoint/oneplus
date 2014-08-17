@@ -8,7 +8,7 @@
 *******************************************************/
 
 // Heading
-$_['heading_title']       = '<b style="color:#E1653B;font-size:110%">Pav Blog Management</b>';
+$_['heading_title']       = 'FAQ';
 
 // Text
 $_['text_treemenu']     = 'Tree Category Management';
@@ -97,8 +97,8 @@ $_['text_explain_drapanddrop'] = 'To sort orders or update parent-child, you dra
 /***/
 $_['menu_dashboard'] = "Dashboard";
 $_['menu_manage_categories'] = "Manage Categories";
-$_['menu_manage_blogs'] = "Manage Blogs";
-$_['menu_addblog'] = "Add Blog";
+$_['menu_manage_blogs'] = "Manage FAQs";
+$_['menu_addblog'] = "Add FAQ";
 $_['menu_comment'] = "Comments";
 $_['menu_module_setting'] = "General Setting";
 $_['menu_information'] = "Information";
@@ -110,14 +110,14 @@ $_['module_comment'] = 'Blog Comment';
 $_['module_category'] = 'Blog Category Menu';
 $_['text_modules_urls'] = 'URLs Format';
 
-$_['latest_blog'] = 'Latest Blog';
+$_['latest_blog'] = 'Latest FAQ';
 $_['most_read'] = 'Most Read';
 $_['latest_comment'] = 'Latest Comment';
 
 $_['databroad_categories'] = 'Categories';
 $_['databroad_add_category'] = 'Add Category';
-$_['databroad_blogs'] = 'Blogs';
-$_['databroad_add_blog'] = 'Add Blog';
+$_['databroad_blogs'] = 'FAQs';
+$_['databroad_add_blog'] = 'Add FAQ';
 $_['databroad_comment'] = 'Comment';
 $_['databroad_modules_setting'] = 'Modules Setting';
 
@@ -129,7 +129,7 @@ $_['text_filter_title'] = 'Filter Title';
 $_['text_reset'] = 'Reset';
 $_['text_position'] = 'Position';
 /** BLOGS PAGE **/
-$_['blogs_page_heading_title'] = 'Blogs Managements';
+$_['blogs_page_heading_title'] = 'FAQs Managements';
 $_['entry_title'] = "Title";
 $_['button_create_blog'] = 'Create Blog';
 $_['text_created'] = 'Created Date';
@@ -140,7 +140,7 @@ $_['text_facebook_id_explain'] = 'Register A Comment Box, Then Get Application I
 
 $_['text_error'] = 'Sorry, We are updating, please come back late. Thanks';
 /** BLOG PAGE **/
-$_['blog_page_heading_title'] = "Blog Edit/Create New"; 
+$_['blog_page_heading_title'] = "FAQ Edit/Create New"; 
 $_['text_general'] = "General"; 
 $_['text_gallery'] = "Images - Gallery"; 
 $_['text_meta']   = "Meta - SEO";

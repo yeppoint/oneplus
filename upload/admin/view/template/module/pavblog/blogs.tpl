@@ -23,6 +23,7 @@
 			
 			<div class="content">
 				<div class="box-columns">
+                    <!--
 					<form id="filter" method="post" action="<?php echo $action;?>">
 						 <div class="filter-wrap clearfix">
 							<div class="filter-title "><label><?php echo $this->language->get('text_filter_title');?></label>
@@ -36,7 +37,7 @@
 							<button type="submit" name="submit"><?php echo $this->language->get('text_filter');?></button>
 							<a href="<?php echo $action_reset;?>"><?php echo $this->language->get('text_reset');?></a>
 						 </div>
-					 </form>
+					 </form>-->
 					<form id="form" enctype="multipart/form-data" method="post" action="<?php echo $action;?>">
 						
 				
@@ -46,10 +47,7 @@
 								<tr>
 									<td width="1" style="text-align: center;"><input type="checkbox" onclick="$('input[name*=\'selected\']').attr('checked', this.checked);"></td>
 									<td class="left"><?php echo $this->language->get("entry_title");?></td>
-									<td class="center" width="200"><?php echo $this->language->get('text_position');?> <a onclick="__submit('position')" class="button"><?php echo $this->language->get("save"); ?></a></td>
 									<td class="right"  width="100"><?php echo $this->language->get('text_status');?></td>
-									<td class="right"  width="100"><?php echo $this->language->get('text_created');?></td>
-									<td class="right"  width="60"><?php echo $this->language->get('text_hits');?></td>
 									<td class="right"  width="100"><?php echo $this->language->get('text_edit');?></td>
 								</tr>
 							</thead>
@@ -59,10 +57,7 @@
 								<tr>
 									<td width="1" style="text-align: center;"><input type="checkbox" name="selected[]" value="<?php echo $blog['blog_id'];?>"></td>
 									<td class="left"><?php echo $blog['title'];?></td>
-									<td class="center"  ><input name="position[<?php echo $blog['blog_id'];?>]" value="<?php echo $blog['position'];?>" size="3"></td>
 									<td class="right"><?php echo ($blog['status']?$this->language->get('text_enable'):$this->language->get('text_disable'));?></td>
-									<td class="right"><?php echo $blog['created'];?></td>
-									<td class="right"><?php echo $blog['hits'];?></td>
 									<td class="right"><a href="<?php echo sprintf($edit_link, $blog['blog_id']) ?>"><?php echo $this->language->get('text_edit');?></a></td>
 								</tr>
 								<?php } ?>
