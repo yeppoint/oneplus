@@ -41,12 +41,12 @@
 	<file name="admin/language/*/common/header.php">
 		<operation error="abort">
 			<search position="before"><![CDATA[$_['text_zone']]]></search>
-			<add><![CDATA[$_['text_pavblog_blog']               = 'Pav Blogs';
+			<add><![CDATA[$_['text_pavblog_blog']               = 'FAQs';
 				$_['text_pavblog_category']               = 'Pav Category';
 				$_['text_pavblog_manage_comment']               = 'Comments';
 				$_['text_pavblog_manage_cate']               = 'Categories';
-				$_['text_pavblog_manage_blog']               = 'Blogs';
-				$_['text_pavblog_add_blog']			= 'Add Blog';
+				$_['text_pavblog_manage_blog']               = 'FAQs';
+				$_['text_pavblog_add_blog']			= 'Add FAQ';
 				$_['text_pavblog_general_setting']               = 'General Settings';
 				$_['text_pavblog_front_mods']               = 'Frontend Modules';
 				$_['text_pavblog_comment']               = 'Pav Latest Comment';

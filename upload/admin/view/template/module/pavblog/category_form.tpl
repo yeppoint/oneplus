@@ -35,9 +35,9 @@ $module_row= 'ss';
 
 	 <table class="form">
 		<tr>
-			<td><?php echo $this->language->get('entry_parent_id');?></td>
+			<td style="display: none"><?php echo $this->language->get('entry_parent_id');?></td>
 				
-			<td>
+			<td style="display: none">
 				<?php echo $menus;?>
  			</td>
 		</tr>
