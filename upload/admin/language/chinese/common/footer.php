@@ -4,5 +4,5 @@
 **/
 
 // Text
-$_['text_footer'] = '技术支持 <a href="http://www.opencartchina.com">OpenCart中国网站</a><br />Version %s';
+$_['text_footer'] = '<a href="http://www.egobest.com">eGoBest</a>';
 ?>
