@@ -31,7 +31,7 @@
                 <li><label><?php echo $text_password; ?>：</label><input name="password" type="password" value="" placeholder="<?php echo $text_password; ?>" id="password"></li>
                 <li id="verifyLi" class=""><label><?php echo $text_captcha; ?>：</label><input name="imgValidCode" type="text" value="" placeholder="<?php echo $text_captcha; ?>" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" class="o-ml-10 captcha" id="imgCode"></li>
                 <li class="tips"><label class="o-ti-999">　提　示：</label><span class="validate_tip">&nbsp;</span></li>
-                <li style="visibility:hidden" class="rememberme"><a href="#" class="o-ml-30">[忘记密码]</a></li>
+                <li class="rememberme"><a href="index.php?route=account/forgotten" class="o-ml-30">[<?php echo $text_forgotten;?>]</a></li>
                 <li class="btns"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-login"><?php echo $text_login; ?></a><a href="index.php?route=account/register" class="btn btn-shop-gray btn-shop-m o-ml-10"><?php echo $text_register; ?></a></li>
             </ul>
         </form>
