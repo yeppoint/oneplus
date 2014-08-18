@@ -43,6 +43,7 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/css/init.css" media="screen">
 <link rel="stylesheet" type="text/css" href="catalog/view/css/common.css" media="screen">
 <link rel="stylesheet" type="text/css" href="catalog/view/css/oneplus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="catalog/view/css/index.css" media="screen">
 <body>
 
     <header>
