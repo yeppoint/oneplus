@@ -64,15 +64,15 @@
 
                                     <span>
                                         <i class="icon-user"></i>
-                                        <a href="index.php?route=account/login" id="glogin" class="t">登录</a> /
-                                        <a href="index.php?route=account/register" id="gregist" class="t">注册</a>
+                                        <a href="index.php?route=account/login" id="glogin" class="t"><?php echo $text_login; ?></a> /
+                                        <a href="index.php?route=account/register" id="gregist" class="t"><?php echo $text_register; ?></a>
                                     </span>
                                 </div>
                             </li>
                             <li class="nav-t nav-cart" id="nav-cart">
                                 <div class="nav-name nav-cart-t">
                                     <span class="anchor t">
-                                        <a href="index.php?route=checkout/checkout" class="t"><i class="icon-cart"></i>购物车<em class="cartNum" style="display:none"></em></a>
+                                        <a href="index.php?route=checkout/checkout" class="t"><i class="icon-cart"></i><?php echo $text_cart; ?><em class="cartNum" style="display:none"></em></a>
                                     </span>
 
                                 </div>
@@ -82,17 +82,17 @@
                     <nav>
                         <ul class="nav">
                             <li class="nav-li nav-li1">
-                                <a href="index.php?route=module/mainproduct/general" class="nav-name">产品浏览</a>
+                                <a href="index.php?route=module/mainproduct/general" class="nav-name"><?php echo $text_overview; ?></a>
                             </li>
                             <li class="nav-li nav-li3">
-                                <a href="index.php?route=product/featured" class="nav-name">产品配件</a>
+                                <a href="index.php?route=product/featured" class="nav-name"><?php echo $text_accessories; ?></a>
 
                             </li>
                             <li class="nav-li nav-li4">
                                 <a href="<?php echo $clientservice; ?>" class="nav-name"><?php echo $text_clientservice; ?></a>
                             </li>
                             <li class="nav-li nav-li4">
-                                <a href="http://support.oneplus.cn" class="nav-name">技术支持</a>
+                                <a href="#" class="nav-name"><?php echo $text_support; ?></a>
                             </li>
                         </ul>
                     </nav>

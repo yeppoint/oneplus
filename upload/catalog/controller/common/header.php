@@ -51,16 +51,22 @@ class ControllerCommonHeader extends Controller {
 		$this->data['text_account'] = $this->language->get('text_account');
 		$this->data['text_checkout'] = $this->language->get('text_checkout');
 
+
 		$this->data['home'] = $this->url->link('common/home');
 		$this->data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
 		$this->data['logged'] = $this->customer->isLogged();
 		$this->data['account'] = $this->url->link('account/account', '', 'SSL');
 		$this->data['shopping_cart'] = $this->url->link('checkout/cart');
 		$this->data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
+        $this->data['text_login'] = $this->language->get('text_login');
+        $this->data['text_register'] = $this->language->get('text_register');
+        $this->data['text_cart'] = $this->language->get('text_cart');
         
         $this->data['clientservice'] = $this->url->link('clientservice/clientservice', '', 'SSL');
         $this->data['text_clientservice'] = $this->language->get('text_clientservice');
-
+        $this->data['text_overview'] = $this->language->get('text_overview');
+        $this->data['text_accessories'] = $this->language->get('text_accessories');
+        $this->data['text_support'] = $this->language->get('text_support');
 		// Daniel's robot detector
 		$status = true;
 
