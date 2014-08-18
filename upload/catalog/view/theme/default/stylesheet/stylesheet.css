@@ -85,9 +85,9 @@ label {
 #content {
 	min-height: 400px;
 	margin-bottom: 25px;
-	padding-top: 2%;
-	width: 70%;
-	padding-left: 15%;
+/*	padding-top: 2%;*/
+	width: 100%;
+/*	padding-left: 15%;*/
 }
 #column-left + #column-right + #content, #column-left + #content {
 	margin-left: 195px;
@@ -485,7 +485,7 @@ input.large-field, select.large-field {
 }
 table.list {
 	border-collapse: collapse;
-	width: 100%;
+	width: 91%;
 	border-top: 1px solid #DDDDDD;
 	border-left: 1px solid #DDDDDD;
 	margin-bottom: 20px;
@@ -1648,4 +1648,11 @@ ul.box-filter > li ul {
 }
 .banner div img {
 	margin-bottom: 20px;
+}
+#content-account{
+	min-height: 400px;
+	margin-bottom: 25px;
+	padding-top: 2%;
+	width: 70%;
+	padding-left: 15%;
 }

@@ -5,7 +5,7 @@
     <?php } ?>
   </div>
   <?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
+<div id="content-account"><?php echo $content_top; ?>
 
   <h1><?php echo $heading_title; ?></h1>
   <table class="list">
