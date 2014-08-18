@@ -8,7 +8,7 @@
 !/upload/system/cache/index.html
 
 # Image File
-/upload/image
+!/upload/image
 
 # Image Cache Files
 /upload/image/cache/*
@@ -23,6 +23,11 @@
 !/upload/download/index.html
 
 !/upload/data/index.html
+
+# vQmod  Files
+/upload/vqmod/mods.cache
+/upload/vqmod/logs
+/upload/vqmod/vqcache
 
 # Flags 
 # remove sharp char if you want to add flags to gitignore

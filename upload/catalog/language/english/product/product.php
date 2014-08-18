@@ -59,4 +59,14 @@ $_['error_captcha']     = 'Warning: Verification code does not match the image!'
 $_['error_upload']      = 'Upload required!';
 $_['error_filename']    = 'Filename must be between 3 and 64 characters!';
 $_['error_filetype']    = 'Invalid file type!';
+
+
+//New
+$_['text_price']                     = 'Price:';
+$_['text_quantity']                  = 'Quantity:';
+$_['text_available_options']         = 'Available Options:';
+$_['text_add_to_cart']               = 'Add to Cart';
+$_['text_product_decription']        = 'Decription';
+$_['text_product_attributes']        = 'Attributes';
+$_['text_faq']                       = 'FAQ';
 ?>
