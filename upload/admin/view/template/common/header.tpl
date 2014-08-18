@@ -239,9 +239,7 @@ $(document).ready(function(){
       </li>
       <li id="help"><a class="top"><?php echo $text_help; ?></a>
         <ul>
-          <li><a href="http://www.opencart.com" target="_blank"><?php echo $text_opencart; ?></a></li>
-          <li><a href="http://www.opencart.com/index.php?route=documentation/introduction" target="_blank"><?php echo $text_documentation; ?></a></li>
-          <li><a href="http://forum.opencart.com" target="_blank"><?php echo $text_support; ?></a></li>
+          <li><a href="http://www.yeppoint.com" target="_blank"><?php echo $text_opencart; ?></a></li>
         </ul>
       </li>
     </ul>
