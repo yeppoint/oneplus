@@ -44,7 +44,7 @@ $_['entry_email']          = '电子邮箱:';
 $_['entry_password']       = '输入密码:';
 $_['entry_confirm']        = '确认密码:';
 $_['entry_captcha']        = '验证码:';
-$_['entry_password_notic'] = '5~16位,数字/字母';
+$_['entry_password_notic'] = '6~16位,数字+字母';
 
 // Error
 $_['error_captcha']        = '验证码不正确!';
