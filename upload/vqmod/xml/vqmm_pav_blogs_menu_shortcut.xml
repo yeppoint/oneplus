@@ -38,7 +38,7 @@
 				]]></add>
 		</operation>
 	</file>
-	<file name="admin/language/*/common/header.php">
+	<file name="admin/language/english/common/header.php">
 		<operation error="abort">
 			<search position="before"><![CDATA[$_['text_zone']]]></search>
 			<add><![CDATA[$_['text_pavblog_blog']               = 'FAQs';
@@ -47,6 +47,21 @@
 				$_['text_pavblog_manage_cate']               = 'Categories';
 				$_['text_pavblog_manage_blog']               = 'FAQs';
 				$_['text_pavblog_add_blog']			= 'Add FAQ';
+				$_['text_pavblog_general_setting']               = 'General Settings';
+				$_['text_pavblog_front_mods']               = 'Frontend Modules';
+				$_['text_pavblog_comment']               = 'Pav Latest Comment';
+				$_['text_pavblog_latest']               = 'Pav Latest';]]></add>
+		</operation>
+	</file>
+    <file name="admin/language/chinese/common/header.php">
+		<operation error="abort">
+			<search position="before"><![CDATA[$_['text_zone']]]></search>
+			<add><![CDATA[$_['text_pavblog_blog']               = 'FAQs';
+				$_['text_pavblog_category']               = 'Pav Category';
+				$_['text_pavblog_manage_comment']               = 'Comments';
+				$_['text_pavblog_manage_cate']               = 'FAQ目录';
+				$_['text_pavblog_manage_blog']               = 'FAQs';
+				$_['text_pavblog_add_blog']			= '添加FAQ';
 				$_['text_pavblog_general_setting']               = 'General Settings';
 				$_['text_pavblog_front_mods']               = 'Frontend Modules';
 				$_['text_pavblog_comment']               = 'Pav Latest Comment';

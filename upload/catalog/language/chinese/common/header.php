@@ -8,7 +8,7 @@ $_['text_wishlist'] 		= '收藏 （%s）';
 $_['text_shopping_cart']  	= '购物车';
 $_['text_items']    		= '%s 个商品 - %s';
 $_['text_search']   		= '搜索';
-$_['text_welcome']  		= '<a href="%s">登录</a> / <a href="%s">注册</a>。';
+$_['text_welcome']  		= '<a href="%s">登录</a> / <a href="%s">注册</a>';
 $_['text_logged']   		= '您登录为<a href="%s">%s</a> <b>(</b> <a href="%s">退出</a> <b>)</b>';
 $_['text_login']            = '登录';
 $_['text_register']         = '注册';
