@@ -12,6 +12,7 @@ class ControllerProductProduct extends Controller {
 		$this->data['text_product_decription'] = $this->language->get('text_product_decription');
 		$this->data['text_product_attributes'] = $this->language->get('text_product_attributes');
 		$this->data['text_faq'] = $this->language->get('text_faq');
+		$this->data['text_add_success'] = $this->language->get('text_add_success');
 
 
 		if (isset($this->request->get['product_id'])) {
