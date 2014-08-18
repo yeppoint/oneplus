@@ -54,7 +54,7 @@ $(document).ready(function(){
 <div id="container">
     <div id="header">
   <div class="div1">
-    <div class="div2"><img src="view/image/logo.png" title="<?php echo $heading_title; ?>" onclick="location = '<?php echo $home; ?>'" /></div>
+    <div class="div2"><title="<?php echo $heading_title; ?>" onclick="location = '<?php echo $home; ?>'" /></div>
     <?php if ($logged) { ?>
     <div class="div3"><img src="view/image/lock.png" alt="" style="position: relative; top: 3px;" />&nbsp;<?php echo $logged; ?></div>
     <?php } ?>
@@ -235,13 +235,6 @@ $(document).ready(function(){
               <li><a href="<?php echo $report_affiliate_commission; ?>"><?php echo $text_report_affiliate_commission; ?></a></li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <li id="help"><a class="top"><?php echo $text_help; ?></a>
-        <ul>
-          <li><a href="http://www.opencart.com" target="_blank"><?php echo $text_opencart; ?></a></li>
-          <li><a href="http://www.opencart.com/index.php?route=documentation/introduction" target="_blank"><?php echo $text_documentation; ?></a></li>
-          <li><a href="http://forum.opencart.com" target="_blank"><?php echo $text_support; ?></a></li>
         </ul>
       </li>
     </ul>
