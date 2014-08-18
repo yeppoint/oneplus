@@ -57,9 +57,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
-    border: 1px solid #dad8d6
+    border: 1px solid #dad8d6;
+    padding-left:70px;
 }
 .phaccul_1 li div:hover {
     outline: 3px solid #dad8d6;
