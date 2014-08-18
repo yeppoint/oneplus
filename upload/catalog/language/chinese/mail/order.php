@@ -29,7 +29,7 @@ $_['text_new_total']            = '总计：';
 $_['text_new_download']         = '确认付款后您将通过以下链接下载文件：';
 $_['text_new_comment']          = '订单附言：';
 $_['text_new_footer']           = '如果您有任何疑问， 请直接回复此邮件。';
-$_['text_new_powered']          = '技术支持 <a href="http://www.opencartchina.com">OpenCart中国网站</a>。';
+$_['text_new_powered']          = '技术支持 <a href="http://www.yeppoint.com">YepPoint</a>。';
 $_['text_update_subject']       = '%s - 订单更新 %s';
 $_['text_update_order']         = '订单号：';
 $_['text_update_date_added']    = '订单日期：';
