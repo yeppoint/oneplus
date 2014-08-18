@@ -24,31 +24,31 @@
             <div class="foo-service clearfix">
                 <dl>
                     <dt>帮助中心</dt>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000011" target="_blank">购物指南</a></dd>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000020" target="_blank">支付方式</a></dd>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000024" target="_blank">配送方式</a></dd>
+                    <dd><a href="#" target="_blank">购物指南</a></dd>
+                    <dd><a href="#" target="_blank">支付方式</a></dd>
+                    <dd><a href="#" target="_blank">配送方式</a></dd>
                 </dl>
                 <dl>
                     <dt>售后服务</dt>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000029" target="_blank">三包政策</a></dd>
-                    <dd><a href="http://service.oneplus.cn/server/shopbranch" target="_blank">售后网点</a></dd>
+                    <dd><a href="#" target="_blank">三包政策</a></dd>
+                    <dd><a href="#" target="_blank">售后网点</a></dd>
                 </dl>
                 <dl>
                     <dt>技术支持</dt>
-                    <dd><a href="http://support.oneplus.cn" target="_blank">一加医生</a></dd>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000031" target="_blank">产品手册</a></dd>
-                    <dd><a href="http://service.oneplus.cn/account/read/categoryId/A1000030" target="_blank">软件下载</a></dd>
+                    <dd><a href="#" target="_blank">一加医生</a></dd>
+                    <dd><a href="#" target="_blank">产品手册</a></dd>
+                    <dd><a href="#" target="_blank">软件下载</a></dd>
                 </dl>
                 <dl>
                     <dt>会员中心</dt>
-                    <dd><a href="http://account.oneplus.cn/regist/index" target="_blank">会员注册</a></dd>
-                    <dd><a href="http://account.oneplus.cn/login/index" target="_blank">会员登录</a></dd>
-                    <dd><a href="http://my.oneplus.cn" target="_blank">个人中心</a></dd>
+                    <dd><a href="#" target="_blank">会员注册</a></dd>
+                    <dd><a href="#" target="_blank">会员登录</a></dd>
+                    <dd><a href="#" target="_blank">个人中心</a></dd>
                 </dl>
                 <dl>
                     <dt>关注我们</dt>
-                    <dd><a href="http://weibo.com/yjservice" target="_blank" rel="nofollow">新浪微博</a></dd>
-                    <dd><a href="http://statics.oneplus.cn/img/weixin.png"  target="_blank" id="showWeixin" rel="nofollow">官方微信</a></dd>
+                    <dd><a href="#" target="_blank" rel="nofollow">新浪微博</a></dd>
+                    <dd><a href="#"  target="_blank" id="showWeixin" rel="nofollow">官方微信</a></dd>
                 </dl>
             </div>
             <div class="foo-service-contact">
