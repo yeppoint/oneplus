@@ -1650,8 +1650,14 @@ ul.box-filter > li ul {
 	margin-bottom: 20px;
 }
 
-#content-account{
-	
+#content-account {
+	min-height: 400px;
+	margin-bottom: 25px;
+	padding-top: 2%;
+	width: 70%;
+	padding-left: 15%;
+}
+#content-checkout {
 	min-height: 400px;
 	margin-bottom: 25px;
 	padding-top: 2%;
