@@ -1000,9 +1000,11 @@ em, i {
     background: url(../img/gotop-on.png) left top no-repeat
 }
 .breadcrumbs {
-    line-height: 20px;
-    font-size: .75em;
-    margin: 16px auto 34px;
+    color: #CCCCCC;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 1% 0 0 6%;
+}
 }
 .breadcrumbs .container {
     text-align: left
