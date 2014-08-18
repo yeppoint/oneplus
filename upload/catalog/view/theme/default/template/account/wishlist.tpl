@@ -8,7 +8,7 @@
 <div class="success"><?php echo $success; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
 <?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
+<div id="content-account"><?php echo $content_top; ?>
 
   <h1><?php echo $heading_title; ?></h1>
   <?php if ($products) { ?>
