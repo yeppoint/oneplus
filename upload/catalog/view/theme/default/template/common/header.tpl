@@ -63,9 +63,12 @@
                                 <div class="nav-name nav-login-t">
 
                                     <span>
-                                        <i class="icon-user"></i>
-                                        <a href="index.php?route=account/login" id="glogin" class="t"><?php echo $text_login; ?></a> /
-                                        <a href="index.php?route=account/register" id="gregist" class="t"><?php echo $text_register; ?></a>
+                                        <?php if (!$logged) {
+                                            echo $text_welcome;
+                                        } else {
+                                            echo $text_logged;
+                                        }
+                                        ?>
                                     </span>
                                 </div>
                             </li>
