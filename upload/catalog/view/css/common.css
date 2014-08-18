@@ -354,7 +354,7 @@ em, i {
 .btn-shop-cart, .btn-shop-cart2, .btn-shop-cart3 {
     width: 193px;
     height: 50px;
-    background: url(../img/icon_asv2.0.png) -207px -60px no-repeat;
+    background: url(../../../image/img/icon_asv2.0.png) -207px -60px no-repeat;
     overflow: hidden
 }
 .btn-shop-cart2 {
@@ -436,7 +436,7 @@ em, i {
     display: inline-block;
     width: 18px;
     height: 14px;
-    background: url(../img/icon_shopv2.0.png) top left no-repeat;
+    background: url(../../../image/img/icon_shopv2.0.png) top left no-repeat;
     margin-right: 7px;
     vertical-align: middle;
     _vertical-align: top
@@ -475,7 +475,7 @@ em, i {
     width: 18px;
     height: 18px;
     overflow: hidden;
-    background: url(../img/icon_shopv2.0.png) -222px top no-repeat;
+    background: url(../../../image/img/icon_shopv2.0.png) -222px top no-repeat;
     color: #fff;
     position: absolute;
     right: 0;
@@ -688,7 +688,7 @@ em, i {
     display: block
 }
 .nav-li7 .nav-name, .nav-li8 .nav-name {
-    background: url(../img/icon_shopv2.0.png) -5px top no-repeat
+    background: url(../../../image/img/icon_shopv2.0.png) -5px top no-repeat
 }
 .nav-li8 .nav-name {
     background-position: -50px top
@@ -705,7 +705,7 @@ em, i {
     display: inline-block;
     width: 87px;
     height: 11px;
-    background: url(../img/icon_memberv2.0.png) -153px -138px no-repeat;
+    background: url(../../../image/img/icon_memberv2.0.png) -153px -138px no-repeat;
     padding: 0;
     margin: 0
 }
@@ -772,7 +772,7 @@ em, i {
     display: inline-block;
     width: 28px;
     height: 30px;
-    background: url(../img/footer-newicon.png) no-repeat;
+    background: url(../../../image/img/footer-newicon.png) no-repeat;
     vertical-align: middle;
     margin-right: 9%
 }
@@ -854,7 +854,7 @@ em, i {
     padding-left: 60px
 }
 .foo-service-contact .icon-tel {
-    background: url(../img/footer-newicon.png) -797px -99px;
+    background: url(../../../image/img/footer-newicon.png) -797px -99px;
     display: block;
     width: 45px;
     height: 45px;
@@ -864,7 +864,7 @@ em, i {
 }
 .foo-service-contact p {
     text-align: left;
-    background: url(../img/footer-newicon.png) no-repeat;
+    background: url(../../../image/img/footer-newicon.png) no-repeat;
     padding: 0;
     margin: 0;
     padding-left: 50px
@@ -891,7 +891,7 @@ em, i {
     font-size: 12px;
     width: 110px;
     height: 31px;
-    background: url(../img/footer-newicon.png) -775px -94px no-repeat;
+    background: url(../../../image/img/footer-newicon.png) -775px -94px no-repeat;
     text-align: center;
     line-height: 31px
 }
@@ -901,7 +901,7 @@ em, i {
     margin-top: 37px
 }
 .foo-service-chat a, .foo-service-chat span, .foo-service-hotline, .foo-service-qrcode {
-    background: url(../img/icon_shopv2.0.png) left top no-repeat;
+    background: url(../../../image/img/icon_shopv2.0.png) left top no-repeat;
     display: block
 }
 .foo-service-qrcode {
@@ -986,7 +986,7 @@ em, i {
     height: 80px;
     cursor: pointer;
     overflow: hidden;
-    background: url(../img/gotop.png) left top no-repeat;
+    background: url(../../../image/img/gotop.png) left top no-repeat;
     display: none;
     z-index: 9
 }
@@ -997,7 +997,7 @@ em, i {
     right: 20px
 }
 .gotop:hover {
-    background: url(../img/gotop-on.png) left top no-repeat
+    background: url(../../../image/img/gotop-on.png) left top no-repeat
 }
 .breadcrumbs {
     line-height: 20px;
@@ -1058,7 +1058,7 @@ html {
     display: block;
     width: 23px;
     height: 23px;
-    background: url(../img/footer-newicon.png) -1117px -104px;
+    background: url(../../../image/img/footer-newicon.png) -1117px -104px;
     position: absolute;
     right: 20px;
     top: 20px;

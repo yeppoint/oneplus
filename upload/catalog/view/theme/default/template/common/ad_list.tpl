@@ -1,0 +1,1 @@
+<?php echo $informations[1]['description'];  ?>

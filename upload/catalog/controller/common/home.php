@@ -17,6 +17,7 @@ class ControllerCommonHome extends Controller {
 			'common/column_right',
 			'common/content_top',
 			'common/content_bottom',
+			'common/ad_list',
 			'common/footer',
 			'common/header'
 		);
