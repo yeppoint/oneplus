@@ -70,7 +70,7 @@
                             </a>
                         </li>
 						<li>
-							<a onclick="_opq.push(['trackEvent','onepluscn_D3','微博客服微问题博服务'])" href="http://weibo.com/yjservice" target="_blank">
+							<a onclick="_opq.push(['trackEvent','onepluscn_D3','微博客服微问题博服务'])" href="#" target="_blank">
                                 <div class="wrap">
                                     <i class="icon-service icon-sina"></i>
 									<span class="text">微博客服</span>
@@ -80,7 +80,7 @@
 							</a>
 						</li>
                         <li>
-                            <a onclick="_opq.push(['trackEvent','onepluscn_D4','一加医生疑难问题一键修复'])" href="http://support.oneplus.cn">
+                            <a onclick="_opq.push(['trackEvent','onepluscn_D4','一加医生疑难问题一键修复'])" href="#">
                                 <div class="wrap">
                                     <i class="icon-service icon-remote"></i>
                                     <span class="text">一加医生</span>
@@ -92,19 +92,6 @@
 					</ul>
                 </div>
             </div>
-
-            <!--
-            <div class="help-common fr">
-                <div class="common-qa">
-                    <h3>常见问题</h3>
-                    <ol>
-				    	<li><a title="" href="">未付款的订单会保存多久？</a></li>
-				        <li><a title="" href="">什么情况下可以申请退换货？</a></li>
-				        <li><a title="" href="">一加商城支持哪些在线支付方式？</a></li>
-				        <li><a title="" href="">一加商城的购物流程步骤是什么？</a></li>
-                    </ol>
-                </div> 
-            </div> -->
         </div>
     </div> 
 </div>
