@@ -11,15 +11,31 @@ class ModelAccountCustomer extends Model {
 
 		$customer_group_info = $this->model_account_customer_group->getCustomerGroup($customer_group_id);
 		$sql = "INSERT INTO " . DB_PREFIX . "customer SET store_id = '" . (int)$this->config->get('config_store_id') . "', email = '" . $this->db->escape($data['email']) .   "', salt = '" . $this->db->escape($salt = substr(md5(uniqid(rand(), true)), 0, 9)) . "', password = '" . $this->db->escape(sha1($salt . sha1($salt . sha1($data['password'])))) . "', customer_group_id = '" . (int)$customer_group_id . "', ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "', status = '1', approved = '" . (int)!$customer_group_info['approval'] . "', date_added = NOW()";
-
+		$sql .= ",firstname = '" . (isset($data['firstname'])?$this->db->escape($data['firstname']):"")."'"; 
+		$sql .= ",lastname = '" . (isset($data['lastname'])?$this->db->escape($data['lastname']):"")."'";
+		$sql .= ",telephone = '" . (isset($data['telephone'])?$this->db->escape($data['telephone']):"")."'";
+		$sql .= ",fax = '" . (isset($data['fax'])?$this->db->escape($data['fax']):"")."'";
+		$sql .= ",newsletter = '" . (isset($data['newsletter'])?$this->db->escape($data['newsletter']):"")."'";
+		 
 		$this->db->query($sql);
 
 		$customer_id = $this->db->getLastId();
 		//empty
 
         $sql = "INSERT INTO " . DB_PREFIX . "address SET customer_id = " . (int)$customer_id;
+        $sql .= ",firstname = '" . (isset($data['firstname'])?$this->db->escape($data['firstname']):"")."'"; 
+		$sql .= ",lastname = '" . (isset($data['lastname'])?$this->db->escape($data['lastname']):"")."'";
+		$sql .= ",company = '" . (isset($data['company'])?$this->db->escape($data['company']):"")."'";
+		$sql .= ",company_id = '" . (isset($data['company_id'])?$this->db->escape($data['company_id']):"")."'";
+		$sql .= ",tax_id = '" . (isset($data['tax_id'])?$this->db->escape($data['tax_id']):"")."'";
+		$sql .= ",address_1 = '" . (isset($data['address_1'])?$this->db->escape($data['address_1']):"")."'";
+		$sql .= ",address_2 = '" . (isset($data['address_2'])?$this->db->escape($data['address_2']):"")."'";
+		$sql .= ",city = '" . (isset($data['city'])?$this->db->escape($data['city']):"")."'";
+		$sql .= ",postcode = '" . (isset($data['postcode'])?$this->db->escape($data['postcode']):"")."'";
+		$sql .= ",country_id = '" . (isset($data['country_id'])?$this->db->escape($data['country_id']):"")."'";
+		$sql .= ",zone_id = '" . (isset($data['zone_id'])?$this->db->escape($data['zone_id']):"")."'";
+		  
 		$this->db->query($sql );
-
 		$address_id = $this->db->getLastId();
 
         $sql= "UPDATE " . DB_PREFIX . "customer SET address_id = " . (int)$address_id . " WHERE customer_id = " . (int)$customer_id ;
