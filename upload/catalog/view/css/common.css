@@ -384,7 +384,8 @@ em, i {
     z-index: 999
 }
 .nav-name {
-    position: relative
+    position: relative;
+    font-size:18px;
 }
 .header-box {
     width: 100%;
