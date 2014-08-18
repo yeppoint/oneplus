@@ -76,7 +76,7 @@
                             <li class="nav-t nav-cart" id="nav-cart">
                                 <div class="nav-name nav-cart-t">
                                     <span class="anchor t">
-                                        <a href="index.php?route=checkout/checkout" class="t"><i class="icon-cart"></i><?php echo $text_cart; ?><em class="cartNum" style="display:none"></em></a>
+                                        <a href="index.php?route=checkout/cart" class="t"><i class="icon-cart"></i><?php echo $text_cart; ?><em class="cartNum" style="display:none"></em></a>
                                     </span>
 
                                 </div>
