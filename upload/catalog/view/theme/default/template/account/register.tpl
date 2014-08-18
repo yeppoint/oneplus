@@ -37,7 +37,6 @@
                 <li><label><em>＊</em><?php echo $entry_confirm; ?></label><input name="password2" type="password" value="" placeholder="<?php echo $entry_password_notic; ?>" id="password2" refid="password" rules="password2"></li>
                 <li class="with-email" style="display: list-item;"><label><em>＊</em><?php echo $entry_captcha; ?></label><input name="imgValidCode" type="text" value="" placeholder="" id="imgValidCode"><img src="index.php?route=tool/captcha" alt="验证码" title="点击更换验证码" class="o-ml-10 captcha" id="imgCode"></li>
                 <li class="btns o-mt-25"><label class="o-ti-999">buttons</label><a href="javascript:;" class="btn btn-shop-red btn-shop-m" id="btn-submit"><?php echo $text_register; ?></a><a href="index.php?route=account/login" class="btn btn-shop-gray btn-shop-m o-ml-10" ><?php echo $text_login; ?></a><input type="hidden" name="reg_type" id="reg_type" value="2"></li>
-                <li class="tips o-c-6 o-fs-12 o-mt-40">点击“免费注册”，即表示您愿意遵守<a href="/regist/accord" target="_blank">用户协议</a></li>
             </ul>
         </form>
     </div>

@@ -237,6 +237,11 @@ $(document).ready(function(){
           </li>
         </ul>
       </li>
+      <li id="help"><a class="top"><?php echo $text_help; ?></a>
+        <ul>
+          <li><a href="http://www.yeppoint.com" target="_blank"><?php echo $text_opencart; ?></a></li>
+        </ul>
+      </li>
     </ul>
     <ul class="right" style="display: none;">
       <li id="store"><a href="<?php echo $store; ?>" target="_blank" class="top"><?php echo $text_front; ?></a>

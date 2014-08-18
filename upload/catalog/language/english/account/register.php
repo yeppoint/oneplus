@@ -40,7 +40,7 @@ $_['entry_email']          = 'E-Mail:';
 $_['entry_password']       = 'Password:';
 $_['entry_confirm']        = 'Confirm:';
 $_['entry_captcha']        = 'Captcha:';
-$_['entry_password_notic'] = '6~16 characters,Number/Letter';
+$_['entry_password_notic'] = '6~16 characters,Number+Letter';
 
 // Error
 $_['error_captcha']        = 'captcha incorrect!';
