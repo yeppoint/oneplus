@@ -17,7 +17,7 @@
   <h2><?php echo $text_address_book; ?></h2>
   <?php foreach ($addresses as $result) { ?>
   <div class="content">
-    <table style="width: 91%;">
+    <table style="width: 70%;">
       <tr>
         <td><?php echo $result['address']; ?></td>
         <td style="text-align: right;"><a href="<?php echo $result['update']; ?>" class="button"><?php echo $button_edit; ?></a> &nbsp; <a href="<?php echo $result['delete']; ?>" class="button"><?php echo $button_delete; ?></a></td>

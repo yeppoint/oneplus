@@ -485,7 +485,7 @@ input.large-field, select.large-field {
 }
 table.list {
 	border-collapse: collapse;
-	width: 91%;
+	width: 70%;
 	border-top: 1px solid #DDDDDD;
 	border-left: 1px solid #DDDDDD;
 	margin-bottom: 20px;
@@ -1324,7 +1324,7 @@ ul.box-filter > li ul {
 .order-list .order-content {
 	padding: 10px 0px;
 	display: inline-block;
-	width: 100%;
+	width: 70%;
 	margin-bottom: 20px;
 	border-top: 1px solid #EEEEEE;
 	border-bottom: 1px solid #EEEEEE;
@@ -1649,7 +1649,9 @@ ul.box-filter > li ul {
 .banner div img {
 	margin-bottom: 20px;
 }
+
 #content-account{
+	
 	min-height: 400px;
 	margin-bottom: 25px;
 	padding-top: 2%;
