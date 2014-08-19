@@ -69,4 +69,6 @@ $_['text_add_to_cart']               = 'Add to Cart';
 $_['text_product_decription']        = 'Decription';
 $_['text_product_attributes']        = 'Attributes';
 $_['text_faq']                       = 'FAQ';
+$_['text_add_success']               = 'Add successfully';
+
 ?>

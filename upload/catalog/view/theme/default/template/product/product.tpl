@@ -121,13 +121,20 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
+
         //init
         if($('.p-td').length>0){
           $('.p-td:first').addClass('sel');
         }
 
+        var text_success = "<?php echo $text_add_success; ?>";
+        var text_add_to_cart = "<?php echo $text_add_to_cart;?>";
         $("#addCartBtn").on("click", function() {
-           
+            //disable ..
+            if($('#addCartBtn').hasClass('disable')){
+              return;
+            }
+
             var post_data = {
               "quantity":parseInt($('.i-qty').text()),
               "product_id":<?php echo $product_id;?>,
@@ -145,16 +152,22 @@
             dataType:'json',
             data: post_data,
             beforeSend:function(){
-              $('#addCartBtn').fadeOut(500);
+
+              $('#addCartBtn').addClass('disable');
             }
            
           })
           .done(function(json) {
-             $('#addCartBtn').fadeIn(500);
+
+             $('#addCartBtn').attr('value', text_success);
+             setTimeout(function(){
+                 $('#addCartBtn').removeClass('disable');
+                 $('#addCartBtn').attr('value', text_add_to_cart);
+             }, 1500);
           })
           .fail(function() {
             alert("Please check your network");
-            $('#addCartBtn').fadeIn(500);
+   
           });
          
           

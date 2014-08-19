@@ -130,7 +130,7 @@
 .input-radio {
     width: 17px;
     height: 17px;
-    background: url(../img/passport/radio.png) no-repeat;
+    /*background: url(../img/passport/radio.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
@@ -142,7 +142,7 @@
 .input-checkbox {
     width: 17px;
     height: 17px;
-    background: url(../img/passport/checkbox.png) no-repeat;
+    /*background: url(../img/passport/checkbox.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
@@ -188,7 +188,7 @@ header {
     width: 100%;
     position: relative;
     box-shadow: 0 1px 5px 1px rgba(127, 127, 127, .2);
-    background: url(../img/header-bg.png) 0 100% repeat-x\9
+    /*background: url(../img/header-bg.png) 0 100% repeat-x\9*/
 }
 header h1 {
     width: 900px;
@@ -240,7 +240,7 @@ footer a:hover {
 footer i {
     width: 14px;
     height: 14px;
-    background: url(../img/passport/logo_footer.png) no-repeat;
+    /*background: url(../img/passport/logo_footer.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle;
     margin-top: -5px
@@ -331,13 +331,13 @@ form input[type=password], form input[type=text] {
     width: 238px
 }
 form input[placeholder=""] {
-    background: url(../img/passport/icon_phone.png) 96% 50% no-repeat #fff
+    /*background: url(../img/passport/icon_phone.png) 96% 50% no-repeat #fff*/
 }
 form input[placeholder=""], form input[placeholder=""] {
-    background: url(../img/passport/icon_user.png) 96% 50% no-repeat #fff
+    /*background: url(../img/passport/icon_user.png) 96% 50% no-repeat #fff*/
 }
 form input[type=password] {
-    background: url(../img/passport/icon_lock.png) 96% 50% no-repeat #fff;
+    /*background: url(../img/passport/icon_lock.png) 96% 50% no-repeat #fff;*/
     -webkit-text-security: circle
 }
 .regtype li {
@@ -389,11 +389,11 @@ form input[type=password] {
     color: #eb0028
 }
 .unilogin .unilogin-qq {
-    background-image: url(../img/passport/icon_qq.png);
+    /*background-image: url(../img/passport/icon_qq.png);*/
     padding-left: 20px
 }
 .unilogin .unilogin-weibo {
-    background-image: url(../img/passport/icon_weibo.png)
+    /*background-image: url(../img/passport/icon_weibo.png)*/
 }
 .rememberme a {
     vertical-align: middle
@@ -408,28 +408,28 @@ form input[type=password] {
     cursor: pointer
 }
 i.zan {
-    background: url(../img/passport/icon_zan_l.png) no-repeat;
+    /*background: url(../img/passport/icon_zan_l.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle
 }
 i.correct {
     width: 28px;
     height: 28px;
-    background: url(../img/passport/icon_correct_l.png) no-repeat;
+    /*background: url(../img/passport/icon_correct_l.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle
 }
 i.warning {
     width: 28px;
     height: 28px;
-    background: url(../img/passport/icon_warning_l.png) no-repeat;
+    /*background: url(../img/passport/icon_warning_l.png) no-repeat;*/
     display: inline-block;
     vertical-align: middle
 }
 .validate_tip i.correct {
     width: 16px;
     height: 16px;
-    background-image: url(../img/passport/icon_correct.png)
+    /*background-image: url(../img/passport/icon_correct.png)*/
 }
 section.main h1 i.correct, section.main h1 i.warning {
     margin-right: 20px
@@ -486,7 +486,7 @@ section .acct-change ol {
 section .acct-change ol li {
     width: 217px;
     height: 17px;
-    background: url(../img/passport/progressbar.png) 100% 0 no-repeat;
+    /*background: url(../img/passport/progressbar.png) 100% 0 no-repeat;*/
     color: #666;
     font-size: 12px;
     line-height: 17px;

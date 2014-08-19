@@ -67,7 +67,6 @@ $(document).ready(function(){
         <ul>
           <li><a href="<?php echo $category; ?>"><?php echo $text_category; ?></a></li>
           <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
-          <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
           <li><a href="<?php echo $profile; ?>"><?php echo $text_profile; ?></a></li>
           <li><a class="parent"><?php echo $text_attribute; ?></a>
             <ul>
@@ -76,7 +75,6 @@ $(document).ready(function(){
             </ul>
           </li>
           <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
-          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
           <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
           <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
           <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
@@ -140,7 +138,6 @@ $(document).ready(function(){
               <li><a href="<?php echo $customer_ban_ip; ?>"><?php echo $text_customer_ban_ip; ?></a></li>
             </ul>
           </li>
-          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
           <li><a href="<?php echo $coupon; ?>"><?php echo $text_coupon; ?></a></li>
           <li><a class="parent"><?php echo $text_voucher; ?></a>
             <ul>
@@ -165,7 +162,6 @@ $(document).ready(function(){
           <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>
           <li><a class="parent"><?php echo $text_design; ?></a>
             <ul>
-              <li><a href="<?php echo $layout; ?>"><?php echo $text_layout; ?></a></li>
               <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
             </ul>
           </li>
@@ -228,11 +224,6 @@ $(document).ready(function(){
               <li><a href="<?php echo $report_customer_order; ?>"><?php echo $text_report_customer_order; ?></a></li>
               <li><a href="<?php echo $report_customer_reward; ?>"><?php echo $text_report_customer_reward; ?></a></li>
               <li><a href="<?php echo $report_customer_credit; ?>"><?php echo $text_report_customer_credit; ?></a></li>
-            </ul>
-          </li>
-          <li><a class="parent"><?php echo $text_affiliate; ?></a>
-            <ul>
-              <li><a href="<?php echo $report_affiliate_commission; ?>"><?php echo $text_report_affiliate_commission; ?></a></li>
             </ul>
           </li>
         </ul>

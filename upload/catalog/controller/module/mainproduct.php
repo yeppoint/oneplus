@@ -10,6 +10,7 @@ class ControllerModuleMainproduct extends Controller {
         $this->data['text_function'] = $this->language->get('text_function');
         $this->data['text_design'] = $this->language->get('text_design');
         $this->data['text_attribute'] = $this->language->get('text_attribute');
+        $this->data['text_buy_product'] = $this->language->get('text_buy_product');
         
         $this->load->model('catalog/product');
         $this->load->model('setting/setting');
@@ -41,39 +42,39 @@ class ControllerModuleMainproduct extends Controller {
     }
 
     public function general(){
-            $this->index();
-            if (isset($this->data['mainproduct']))
-                $this->data['description'] = $this->data['mainproduct']['general_description'];
-            else
-                $this->data['description'] = '';
-            return $this->response->setOutput($this->render());
+        $this->index();
+        if (isset($this->data['mainproduct']))
+            $this->data['description'] = $this->data['mainproduct']['general_description'];
+        else
+            $this->data['description'] = '';
+        return $this->response->setOutput($this->render());
     }
 
     public  function func(){
-            $this->index();
-            if (isset($this->data['mainproduct']))
-                $this->data['description'] = $this->data['mainproduct']['function_description'];
-            else
-                $this->data['description'] = '';
-            return $this->response->setOutput($this->render());
+        $this->index();
+        if (isset($this->data['mainproduct']))
+            $this->data['description'] = $this->data['mainproduct']['function_description'];
+        else
+            $this->data['description'] = '';
+        return $this->response->setOutput($this->render());
     }
 
     public function design(){
-            $this->index();
-            if (isset($this->data['mainproduct']))
-                $this->data['description'] = $this->data['mainproduct']['design_description'];
-            else
-                $this->data['description'] = '';
-            return $this->response->setOutput($this->render());
+        $this->index();
+        if (isset($this->data['mainproduct']))
+            $this->data['description'] = $this->data['mainproduct']['design_description'];
+        else
+            $this->data['description'] = '';
+        return $this->response->setOutput($this->render());
     }
 
     public function attribute(){
-            $this->index();
-            if (isset($this->data['mainproduct']))
-                $this->data['description'] = $this->data['mainproduct']['attribute_description'];
-            else
-                $this->data['description'] = '';
-            return $this->response->setOutput($this->render());
+        $this->index();
+        if (isset($this->data['mainproduct']))
+            $this->data['description'] = $this->data['mainproduct']['attribute_description'];
+        else
+            $this->data['description'] = '';
+        return $this->response->setOutput($this->render());
     }
 }
 

@@ -19,9 +19,11 @@ $_['text_product_price']        = '价格';
 $_['text_product_quantity']     = '数量';
 $_['text_product_model']        = '型号';
 $_['text_product_status']       = '状态';
+$_['text_error_warning']        = '你需要选择一件商品';
 
 $_['button_filter']             = '筛选';
 $_['button_save']               = '保存';
 $_['button_cancel']             = '取消';
+
 
 ?>
