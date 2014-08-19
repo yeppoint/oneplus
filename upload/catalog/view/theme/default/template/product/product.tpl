@@ -23,7 +23,7 @@
           <!--<div class="p-sale"><p class="sale-info">特价</p></div> -->
         </div>
         <div class="b-detail-r sell-ph-det">
-          <h1 class="p-title"><?php echo $product_name;?></h1>
+          <h1 class="p-title" style="color:#10181f"><?php echo $product_name;?></h1>
           <p class="p-des"><a href="#"></a></p>
                 <div class="p-price">
                     <label class="s-title2"><?php echo $text_price;?></label><strong><?php echo $price;?></strong>
@@ -53,7 +53,11 @@
                 </div>
 
                 <div class="p-bbtn cf">
-                    <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
+                    <?php if($quantity > 0) { ?>
+                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
+                    <? } else {?>
+                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-gray btn-shop-xxl disable" value="<?php echo $stock;?>" >
+                    <? } ?>
                 </div>
             </div>
         </div>
