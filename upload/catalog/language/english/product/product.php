@@ -71,4 +71,20 @@ $_['text_product_attributes']        = 'Attributes';
 $_['text_faq']                       = 'FAQ';
 $_['text_add_success']               = 'Add successfully';
 
+$_['text_faq_content'] ='<div class = "c cf"> 
+                           <dl> 
+                               <dt> Warranty Services Introduction </dt> 
+                               <dd> 1, the underwriting cycle: charger, data cable, mobile power, Bluetooth stereo, headphones (wired / wireless headset), from the date of receipt, you can enjoy seven days no reason to return, 15 days replacement, one year warranty ; holster, protective shell, screen protective film, frame, dust plugs from the date of receipt, you can enjoy seven days no reason to return, 15 days replacement; </dd> 
+                               <dd> 2, return requirements: commodity and packaging to maintain the status quo when one plus sale, accessories and documents intact, complete, and provide relevant order number, invoice and three bags of evidence; returned non-product issues, need product packaging intact, and only returned once, consumers bear the postage; returned product issues, please contact one plus artificial customer service, after confirming the product problems and provide relevant documents returned, using the specified stream to pay the way for a return plus. </dd> 
+                           </dl> 
+                           <dl> 
+                               <dt> sign Caution <span> (Please note that when viewing objects sign the following information) </span> </dt> 
+                               <dd> 1, if the impact of receipt of the reasons for the presence of damaged packaging, etc., please reject, and promptly contact customer service manual to help deal with a plus; </dd> 
+                               <dd> 2, please view the merchandise as soon as possible after receipt of (parts, invoices, warranty, etc.) is complete, if found wrong merchandise, merchandise less fat, merchandise surface quality problems, please contact us within 24 hours of one plus artificial Customer Service assistance. </dd> 
+                           </dl> 
+                           <dl class = "last"> 
+                               <dt> Returns for the process </dt> 
+                               <dd> According Warranty policy, in line with the conditions of return, please call 400-888-1111 or apply through the mall to return in order center, three packs of relevant documents, there will be a dedicated staff for your processing. </dd> 
+                           </dl> 
+                       </div>';
 ?>
