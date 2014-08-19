@@ -43,8 +43,8 @@ class ControllerProductProduct extends Controller {
 
 		 	$this->data['attrs'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 		 	 
-
             //没有数量了
+            $this->data['quantity'] = $product_info['quantity'];
 			if ($product_info['quantity'] <= 0) {
 				$this->data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
