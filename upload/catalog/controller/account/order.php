@@ -147,6 +147,7 @@ class ControllerAccountOrder extends Controller {
 
 	public function info() { 
 		$this->language->load('account/order');
+		$this->document->addStyle('catalog/view/css/member.css');
 
 		if (isset($this->request->get['order_id'])) {
 			$order_id = $this->request->get['order_id'];

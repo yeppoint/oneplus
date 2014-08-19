@@ -23,7 +23,7 @@
           <!--<div class="p-sale"><p class="sale-info">特价</p></div> -->
         </div>
         <div class="b-detail-r sell-ph-det">
-          <h1 class="p-title"><?php echo $product_name;?></h1>
+          <h1 class="p-title" style="color:#10181f"><?php echo $product_name;?></h1>
           <p class="p-des"><a href="#"></a></p>
                 <div class="p-price">
                     <label class="s-title2"><?php echo $text_price;?></label><strong><?php echo $price;?></strong>
@@ -53,7 +53,11 @@
                 </div>
 
                 <div class="p-bbtn cf">
-                    <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
+                    <?php if($quantity > 0) { ?>
+                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
+                    <?php } else {?>
+                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-gray btn-shop-xxl disable" value="<?php echo $stock;?>" >
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -67,43 +71,36 @@
                 <li class="l"><a href="<?php echo $product_url;?>#anchor-question"><?php echo $text_faq;?></a></li>
             </ul>
             <!--商品详情-->
-             <a name="anchor-pic"></a>
-            <ul class="as-detail-pic" name="anchor-pic">
+    
+            <ul class="as-detail-pic" >
                  <?php echo $product_description;?>
 
             <!--规格参数-->
-             <a name="anchor-spec"></a>
             <section>
              
               <div class="box as-detail-spec" >
                     <h2 ><?php echo $text_product_attributes;?></h2>
-                    <div class="c cf p-info-list">
-                      <?php foreach ($attrs as $attr) { ?>
-                         <div class="phone-info">
-                            <h3 class="p-h"><?php echo $attr['name'];?></h3>
-                            <div class="p-info">
-                              <?php foreach ($attr['attribute'] as $attribute) { ?>
-                                <p> <?php echo $attribute['text'];?></p>
-                              <?php }?>
-                            </div>
-                        </div>
-                      <?php }?>
-                    </div>
+                    <div class="c cf ">
+                      <ul>
+                        <?php foreach ($attrs as $attr) {        
+                           foreach ($attr['attribute'] as $attribute) { ?>
+                               <li>
+                                 <span><?php echo $attribute['name'];?></span>
+                                  <?php echo $attribute['text'];?>
+                               </li>
+                           <?php }
+                         }?>                    
+                      </ul>
+                    </div>                  
                 </div>
             </section>
 
             <!--常见问题-->
-            <a name="anchor-question"></a>
             <section>
                
                 <div class="box as-detail-question" >
                     <h2><?php echo $text_faq;?></h2>
-                    <div class="c cf">
-                        <dl>
-                            <dt>Not things</dt>
-                        </dl>
-                       
-                    </div>
+                    <?php echo $text_faq_content; ?>
                 </div>
             </section>
         </div>
