@@ -100,12 +100,7 @@
                
                 <div class="box as-detail-question" >
                     <h2><?php echo $text_faq;?></h2>
-                    <div class="c cf">
-                        <dl>
-                            <dt>Not things</dt>
-                        </dl>
-                       
-                    </div>
+                    <?php echo $text_faq_content; ?>
                 </div>
             </section>
         </div>

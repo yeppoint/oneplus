@@ -13,7 +13,7 @@ class ControllerProductProduct extends Controller {
 		$this->data['text_product_attributes'] = $this->language->get('text_product_attributes');
 		$this->data['text_faq'] = $this->language->get('text_faq');
 		$this->data['text_add_success'] = $this->language->get('text_add_success');
-
+		$this->data['text_faq_content'] = $this->language->get('text_faq_content');
 
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
