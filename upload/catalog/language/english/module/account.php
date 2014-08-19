@@ -20,4 +20,5 @@ $_['text_newsletter']  = 'Newsletter';
 $_['text_recurring']   = 'Recurring payments';
 $_['text_reward']        = 'Your Reward Points';
 $_['text_my_newsletter'] = 'Newsletter';
+$_['text_my_orders'] ='My Orders';
 ?>

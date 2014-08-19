@@ -24,7 +24,7 @@ class ControllerProductFeatured extends Controller{
                     'product_id' => $product_info['product_id'],
                     'name'       => $product_info['name'],
                     'image'      => $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height')),
-                    'price'      => $product_info['price'],
+                    'price'      => $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax'))),
                     'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
                 );
             }
@@ -33,11 +33,12 @@ class ControllerProductFeatured extends Controller{
         $this->data['all_products'] = array();
         $all_products = $this->model_catalog_product->getProducts();
         foreach ($all_products as $product) {
+            
               $this->data['all_products'][] = array(
                     'product_id' => $product['product_id'],
                     'name'       => $product['name'],
                     'image'      => $this->model_tool_image->resize($product['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height')),
-                    'price'      => $product['price'],
+                    'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'))),
                     'href'       => $this->url->link('product/product', 'product_id=' . $product['product_id'])
                 );
         }

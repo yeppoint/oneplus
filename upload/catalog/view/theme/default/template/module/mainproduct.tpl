@@ -30,6 +30,7 @@ $(window).load(function(){
 					<li class="tn2"><a href="index.php?route=module/mainproduct/func"><?php echo $text_function;?></a></li>
 					<li class="tn3"><a href="index.php?route=module/mainproduct/design"><?php echo $text_design;?></a></li>
 					<li class="tn4"><a href="index.php?route=module/mainproduct/attribute"><?php echo $text_attribute;?></a></li>
+					<li class="tn5 btn-jym bnt-installment"><a href='<?php if(isset($mainproduct)) { echo "index.php?route=product/product&product_id=" . (string)$mainproduct["product"]["product_id"]; } else { echo "#"; }?>'><?php echo $text_buy_product;?></a></li>
 				</ul>
 				</div>
 			</div>

@@ -31,6 +31,8 @@ class ControllerAccountLogin extends Controller {
         $this->data['text_captcha'] = $this->language->get('text_captcha');
         $this->data['text_register'] = $this->language->get('text_register');
         $this->data['text_login'] = $this->language->get('text_login');
+        $this->data['text_forgotten'] = $this->language->get('text_forgotten');
+
          
 		$this->load->model('account/customer');
 

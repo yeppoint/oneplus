@@ -11,7 +11,7 @@ $_['text_module']         = '模块管理';
 $_['text_success']        = '成功: 您已修改电子报订阅(Newsletter)模块！';
 $_['text_left']           = '左';
 $_['text_right']          = '右';
-$_['text_info']           = '<span class="help">由 <a href="http://www.probeseven.com" target="_blank"> Probeseven </a>开发并由<a href="http://www.opencartchina.com" target="_blank"> OpenCart中国网站 </a> 改进并支持中文</span>';  
+$_['text_info']           = '<span class="help">由 <a href="http://www.yeppoint.com" target="_blank"> YepPoint </a>开发'  
 $_['text_module']         = '模块';
 $_['text_content_top']    = '内容的上部';
 $_['text_content_bottom'] = '内容的底部';

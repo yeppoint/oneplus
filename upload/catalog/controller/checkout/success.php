@@ -21,6 +21,7 @@ class ControllerCheckoutSuccess extends Controller {
 		$this->language->load('checkout/success');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('upload\catalog\view\theme\default\stylesheet\stylesheet.css');
 
 		$this->data['breadcrumbs'] = array(); 
 
