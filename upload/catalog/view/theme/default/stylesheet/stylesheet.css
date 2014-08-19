@@ -1664,3 +1664,10 @@ ul.box-filter > li ul {
 	width: 70%;
 	padding-left: 15%;
 }
+#content-success {
+	min-height: 400px;
+	margin-bottom: 25px;
+	padding-top: 2%;
+	width: 70%;
+	padding-left: 15%;
+}
