@@ -71,13 +71,13 @@
                 <li class="l"><a href="<?php echo $product_url;?>#anchor-question"><?php echo $text_faq;?></a></li>
             </ul>
             <!--商品详情-->
-    
+            <a name="anchor-pic"></a>
             <ul class="as-detail-pic" >
                  <?php echo $product_description;?>
 
             <!--规格参数-->
+            <a name="anchor-spec"></a>
             <section>
-             
               <div class="box as-detail-spec" >
                     <h2 ><?php echo $text_product_attributes;?></h2>
                     <div class="c cf ">
@@ -96,8 +96,8 @@
             </section>
 
             <!--常见问题-->
+            <a name="anchor-question"></a>
             <section>
-               
                 <div class="box as-detail-question" >
                     <h2><?php echo $text_faq;?></h2>
                     <?php echo $text_faq_content; ?>
