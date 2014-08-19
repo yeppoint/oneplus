@@ -1655,9 +1655,16 @@ ul.box-filter > li ul {
 	margin-bottom: 25px;
 	padding-top: 2%;
 	width: 70%;
-	padding-left: 15%;
+	padding-left: 25%;
 }
 #content-checkout {
+	min-height: 400px;
+	margin-bottom: 25px;
+	padding-top: 2%;
+	width: 70%;
+	padding-left: 15%;
+}
+#content-success {
 	min-height: 400px;
 	margin-bottom: 25px;
 	padding-top: 2%;
