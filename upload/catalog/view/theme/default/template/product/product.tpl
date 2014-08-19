@@ -55,9 +55,9 @@
                 <div class="p-bbtn cf">
                     <?php if($quantity > 0) { ?>
                       <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
-                    <? } else {?>
+                    <?php } else {?>
                       <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-gray btn-shop-xxl disable" value="<?php echo $stock;?>" >
-                    <? } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
