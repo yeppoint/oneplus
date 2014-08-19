@@ -14,7 +14,7 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-data"><?php echo $tab_data; ?></a><a href="#tab-links"><?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-profile"><?php echo $tab_profile; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><?php echo $tab_design; ?></a></div>
+      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-data"><?php echo $tab_data; ?></a><a href="#tab-links"><?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-profile"><?php echo $tab_profile; ?></a><!-- <a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a> --><a href="#tab-reward"><?php echo $tab_reward; ?><a href="#tab-image"><?php echo $tab_image; ?></a></div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           <div id="languages" class="htabs">
@@ -61,7 +61,7 @@
                 <span class="error"><?php echo $error_model; ?></span>
                 <?php } ?></td>
             </tr>
-            <tr>
+           <!--  <tr>
               <td><?php echo $entry_sku; ?></td>
               <td><input type="text" name="sku" value="<?php echo $sku; ?>" /></td>
             </tr>
@@ -84,11 +84,11 @@
             <tr>
               <td><?php echo $entry_mpn; ?></td>
               <td><input type="text" name="mpn" value="<?php echo $mpn; ?>" /></td>
-            </tr>
-            <tr>
+            </tr> -->
+<!--             <tr>
               <td><?php echo $entry_location; ?></td>
               <td><input type="text" name="location" value="<?php echo $location; ?>" /></td>
-            </tr>
+            </tr> -->
             <tr>
                 <td><?php echo $entry_price; ?></td>
                 <td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
@@ -110,10 +110,10 @@
               <td><?php echo $entry_quantity; ?></td>
               <td><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" /></td>
             </tr>
-            <tr>
+<!--             <tr>
               <td><?php echo $entry_minimum; ?></td>
               <td><input type="text" name="minimum" value="<?php echo $minimum; ?>" size="2" /></td>
-            </tr>
+            </tr> -->
             <tr>
               <td><?php echo $entry_subtract; ?></td>
               <td><select name="subtract">
@@ -162,7 +162,7 @@
                   <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
                   <a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
             </tr>
-            <tr>
+<!--             <tr>
               <td><?php echo $entry_date_available; ?></td>
               <td><input type="text" name="date_available" value="<?php echo $date_available; ?>" size="12" class="date" /></td>
             </tr>
@@ -183,7 +183,7 @@
                   <?php } ?>
                   <?php } ?>
                 </select></td>
-            </tr>
+            </tr> -->
             <tr>
               <td><?php echo $entry_weight; ?></td>
               <td><input type="text" name="weight" value="<?php echo $weight; ?>" /></td>
@@ -240,7 +240,7 @@
                   <?php } ?>
                 </div></td>
             </tr> 
-            <tr>
+<!--             <tr>
               <td><?php echo $entry_filter; ?></td>
               <td><input type="text" name="filter" value="" /></td>
             </tr>
@@ -255,7 +255,7 @@
                   </div>
                   <?php } ?>
                 </div></td>
-            </tr>                       
+            </tr>    -->                    
             <tr>
               <td><?php echo $entry_store; ?></td>
               <td><div class="scrollbox">
@@ -283,7 +283,7 @@
                   <?php } ?>
                 </div></td>
             </tr>
-            <tr>
+<!--             <tr>
               <td><?php echo $entry_download; ?></td>
               <td><input type="text" name="download" value="" /></td>
             </tr>			
@@ -298,7 +298,7 @@
                   </div>
                   <?php } ?>
                 </div></td>
-            </tr>
+            </tr> -->
             <tr>
               <td><?php echo $entry_related; ?></td>
               <td><input type="text" name="related" value="" /></td>
@@ -570,7 +570,7 @@
                 </tfoot>
             </table>
         </div>
-        <div id="tab-discount">
+<!--         <div id="tab-discount">
           <table id="discount" class="list">
             <thead>
               <tr>
@@ -655,7 +655,7 @@
               </tr>
             </tfoot>
           </table>
-        </div>
+        </div> -->
         <div id="tab-image">
           <table id="images" class="list">
             <thead>
@@ -711,7 +711,7 @@
             <?php } ?>
           </table>
         </div>
-        <div id="tab-design">
+<!--         <div id="tab-design">
           <table class="list">
             <thead>
               <tr>
@@ -752,7 +752,7 @@
             </tbody>
             <?php } ?>
           </table>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
@@ -1342,7 +1342,7 @@ function addProfile() {
     $('#tab-profile table tbody').append(html);
 }
 
-<?php if (isset($this->request->get['product_id'])) { ?>
+/* <?php if (isset($this->request->get['product_id'])) { ?>
     function openbayLinkStatus(){
         var product_id = '<?php echo $this->request->get['product_id']; ?>';
         $.ajax({
@@ -1366,7 +1366,7 @@ function addProfile() {
 
     $(document).ready(function(){
         openbayLinkStatus();
-    });
+    }); */
 <?php } ?>
 
 //--></script>
