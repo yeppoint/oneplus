@@ -19,6 +19,7 @@ $_['text_product_price']        = 'Price';
 $_['text_product_quantity']     = 'Quantity';
 $_['text_product_model']        = 'Model';
 $_['text_product_status']       = 'Status';
+$_['text_error_warning']        = 'A product is needed';
 
 $_['button_filter']             = 'Filter';
 $_['button_save']               = 'Save';
