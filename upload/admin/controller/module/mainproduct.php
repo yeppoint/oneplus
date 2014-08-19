@@ -48,11 +48,11 @@ class ControllerModuleMainproduct extends Controller {
 			'separator' => ' :: '
 		);		
 		
-		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
+		if ($this->request->server['REQUEST_METHOD'] == 'POST' && $this->validateForm($this->request->post)) {
 			$this->model_setting_setting->editSetting('mainproduct', $this->request->post);
 			$this->session->data['success'] = $this->language->get('text_success');
 			$this->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
-		}
+		} 
 		
 		$this->data['token'] = $this->session->data['token'];
 		$this->data['action'] = $this->url->link('module/mainproduct', 'token=' . $this->session->data['token'], 'SSL');
@@ -113,6 +113,17 @@ class ControllerModuleMainproduct extends Controller {
 			return $this->response->setOutput(json_encode(array()));
 		}
 	}
+    
+    public function validateForm($post) {
+        if (isset($post['product-id']) && (int)$post['product-id'] > 0) {
+            $this->data['error_warning'] = '';
+            return true;
+        }
+        else {
+            $this->data['error_warning'] = $this->language->get('text_error_warning');
+            return false;
+        }
+    }
 }
 
 ?>
