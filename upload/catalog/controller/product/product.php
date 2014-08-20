@@ -13,7 +13,7 @@ class ControllerProductProduct extends Controller {
 		$this->data['text_product_attributes'] = $this->language->get('text_product_attributes');
 		$this->data['text_faq'] = $this->language->get('text_faq');
 		$this->data['text_add_success'] = $this->language->get('text_add_success');
-
+		$this->data['text_faq_content'] = $this->language->get('text_faq_content');
 
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
@@ -43,8 +43,8 @@ class ControllerProductProduct extends Controller {
 
 		 	$this->data['attrs'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 		 	 
-		 	$this->log->write($this->data['attrs']);
             //没有数量了
+            $this->data['quantity'] = $product_info['quantity'];
 			if ($product_info['quantity'] <= 0) {
 				$this->data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
