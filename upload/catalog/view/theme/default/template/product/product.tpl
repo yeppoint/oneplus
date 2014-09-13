@@ -54,9 +54,11 @@
 
                 <div class="p-bbtn cf">
                     <?php if($quantity > 0) { ?>
-                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xxl" value="<?php echo $text_add_to_cart;?>" >
+                      <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xl" value="<?php echo $text_add_to_cart;?>" >
+                         <input id="buyNow" style="margin-left:10px;" data-disabled="true" type="button" class="btn btn-shop-red btn-shop-xl" value="直接购买">
                     <?php } else {?>
                       <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-gray btn-shop-xxl disable" value="<?php echo $stock;?>" >
+                 
                     <?php } ?>
                 </div>
             </div>
@@ -126,7 +128,7 @@
 
         var text_success = "<?php echo $text_add_success; ?>";
         var text_add_to_cart = "<?php echo $text_add_to_cart;?>";
-        $("#addCartBtn").on("click", function() {
+        $("#addCartBtn").on("click", function(event,isBuyNow) {
             //disable ..
             if($('#addCartBtn').hasClass('disable')){
               return;
@@ -152,23 +154,30 @@
 
               $('#addCartBtn').addClass('disable');
             }
+            
            
           })
           .done(function(json) {
-
-             $('#addCartBtn').attr('value', text_success);
-             setTimeout(function(){
-                 $('#addCartBtn').removeClass('disable');
-                 $('#addCartBtn').attr('value', text_add_to_cart);
-             }, 1500);
+             if(isBuyNow==undefined || !isBuyNow ){
+               //not buy now
+               $('#addCartBtn').attr('value', text_success);
+               setTimeout(function(){
+                   $('#addCartBtn').removeClass('disable');
+                   $('#addCartBtn').attr('value', text_add_to_cart);
+               }, 1500);
+             }else{//buy now
+                location = "index.php?route=checkout/checkout";
+             }
+            
           })
           .fail(function() {
             alert("Please check your network");
    
-          });
-         
-          
-          
+          }); 
+        });
+
+        $('#buyNow').on('click',function(){
+            $("#addCartBtn").trigger('click',[true]);
         });
         //option value
         $('.p-td').on('click',function(){
