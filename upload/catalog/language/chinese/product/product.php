@@ -72,6 +72,7 @@ $_['text_product_decription']        = '商品详情';
 $_['text_product_attributes']        = '规格参数';
 $_['text_faq']                       = '常见问题';
 $_['text_add_success']               = '已加入购物车!';
+$_['text_pay_now']                   = '直接付款';
 
 $_['text_faq_content'] ='<div class="c cf">
                           <dl>

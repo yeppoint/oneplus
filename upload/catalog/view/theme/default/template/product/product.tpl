@@ -55,7 +55,7 @@
                 <div class="p-bbtn cf">
                     <?php if($quantity > 0) { ?>
                       <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-red btn-shop-xl" value="<?php echo $text_add_to_cart;?>" >
-                         <input id="buyNow" style="margin-left:10px;" data-disabled="true" type="button" class="btn btn-shop-red btn-shop-xl" value="直接购买">
+                      <input id="payNow" style="margin-left:10px;" data-disabled="true" type="button" class="btn btn-shop-red btn-shop-xl" value="<?php echo $text_pay_now;?>">
                     <?php } else {?>
                       <input id="addCartBtn" data-disabled="true" type="button" class="btn fl btn-shop-gray btn-shop-xxl disable" value="<?php echo $stock;?>" >
                  
@@ -128,7 +128,7 @@
 
         var text_success = "<?php echo $text_add_success; ?>";
         var text_add_to_cart = "<?php echo $text_add_to_cart;?>";
-        $("#addCartBtn").on("click", function(event,isBuyNow) {
+        $("#addCartBtn").on("click", function(event,isPayNow) {
             //disable ..
             if($('#addCartBtn').hasClass('disable')){
               return;
@@ -154,11 +154,11 @@
 
               $('#addCartBtn').addClass('disable');
             }
-            
+
            
           })
           .done(function(json) {
-             if(isBuyNow==undefined || !isBuyNow ){
+             if(isPayNow==undefined || !isPayNow ){
                //not buy now
                $('#addCartBtn').attr('value', text_success);
                setTimeout(function(){
@@ -176,7 +176,7 @@
           }); 
         });
 
-        $('#buyNow').on('click',function(){
+        $('#payNow').on('click',function(){
             $("#addCartBtn").trigger('click',[true]);
         });
         //option value

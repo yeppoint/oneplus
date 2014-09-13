@@ -70,6 +70,7 @@ $_['text_product_decription']        = 'Decription';
 $_['text_product_attributes']        = 'Attributes';
 $_['text_faq']                       = 'FAQ';
 $_['text_add_success']               = 'Add successfully';
+$_['text_pay_now']                   = 'Pay Now';
 
 $_['text_faq_content'] ='<div class = "c cf"> 
                            <dl> 
