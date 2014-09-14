@@ -30,18 +30,23 @@
                 </div>
 
                 <!--option属性-->
-                <div class="p-capacity">
-                    <?php if(isset($options) && isset($options['option_value'])){ ?>
-                        <h2 class="p-tr-title"><?php echo $text_available_options;?></h2>
-                        <dl class="p-tr cf">
-                          <?php foreach ($options['option_value'] as $option_value) { ?>
-                             <dd>
-                                <a class="p-td" name="<?php echo $options['product_option_id']; ?>" id="<?php echo $option_value['product_option_value_id']; ?>"><i></i><?php echo $option_value['name']; ?></a>
-                            </dd>
-                          <?php }?>
-                        </dl>
+                <?php if(isset($options)) { ?>
+                    <?php foreach ($options as $option) { ?>
+                        <div class="p-capacity">
+                            <h2 class="p-tr-title"><?php echo $option['name'];?></h2>
+                            <dl class="p-tr cf">
+                              <?php foreach ($option['option_value'] as $option_value) { ?>
+                                 <dd>
+                                    <a class="p-td" name="<?php echo $option['product_option_id']; ?>" id="<?php echo $option_value['product_option_value_id']; ?>">
+                                      <i></i><?php echo $option_value['name']; ?>
+                                    </a>
+                                </dd>
+                              <?php }?>
+                            </dl>
+                        </div>
                     <?php }?>
-                </div>
+                <?php }?>
+        
               
                 <div class="p-qty new-qty cf">
                     <label class="s-title2"><?php echo $text_quantity;?></label>
@@ -120,11 +125,11 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
+        //init first_option
+        $('.p-capacity').each(function(index) {
+          var first_option = $(this).find('.p-td:first').addClass('sel');
+        });
 
-        //init
-        if($('.p-td').length>0){
-          $('.p-td:first').addClass('sel');
-        }
 
         var text_success = "<?php echo $text_add_success; ?>";
         var text_add_to_cart = "<?php echo $text_add_to_cart;?>";
@@ -134,17 +139,19 @@
               return;
             }
 
+            var _option ={};
+            $('a.sel').each(function(){
+                _option[$(this).attr('name')] = $(this).attr('id');
+            });
+
             var post_data = {
               "quantity":parseInt($('.i-qty').text()),
               "product_id":<?php echo $product_id;?>,
-               <?php if(isset($options) && isset($options['option_value'])){ ?>
-                  "option":{
-                    "<?php echo $options['product_option_id']; ?>":parseInt($('a.sel').attr('id'))
-                   }
-                  
+               <?php if(isset($options)){ ?>
+                  "option":_option
               <?php }?>
             }
-
+ 
           $.ajax({
             url: 'index.php?route=checkout/cart/add',
             type: 'POST',
@@ -158,6 +165,7 @@
            
           })
           .done(function(json) {
+              console.log(json);
              if(isPayNow==undefined || !isPayNow ){
                //not buy now
                $('#addCartBtn').attr('value', text_success);
@@ -180,9 +188,13 @@
             $("#addCartBtn").trigger('click',[true]);
         });
         //option value
-        $('.p-td').on('click',function(){
-            $('.p-td').removeClass('sel');
-            $(this).addClass('sel');
+        // visit sigle `capacity`
+        $('.p-capacity').each(function(index) {
+          var options = $(this).find('.p-td')
+          options.on('click',function(){
+              options.removeClass('sel');
+              $(this).addClass('sel');
+          });
         });
 
         //+ -

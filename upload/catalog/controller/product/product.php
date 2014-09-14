@@ -94,7 +94,8 @@ class ControllerProductProduct extends Controller {
 
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
 				//$option['type'] == 'select' || || $option['type'] == 'checkbox' || $option['type'] == 'image'
-				//only support radio, radio单选仅/只有1个
+				
+				//only support radio, radio单选仅
 				if ($option['type'] == 'radio' ) {
 					$option_value_data = array();
 
@@ -117,8 +118,8 @@ class ControllerProductProduct extends Controller {
 						}
 					}
 				
-					//$this->data['options'][] only one!
-					$this->data['options']  = array(
+					//$this->data['options'][] are not only one!
+					$this->data['options'][]  = array(
 						'product_option_id' => $option['product_option_id'],
 						'option_id'         => $option['option_id'],
 						'name'              => $option['name'],
@@ -127,7 +128,7 @@ class ControllerProductProduct extends Controller {
 						'required'          => $option['required']
 					);
 				} 
-
+				
 			}
 
 			if ($product_info['minimum']) {
