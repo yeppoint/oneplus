@@ -24,14 +24,14 @@
         </div>
         <div class="b-detail-r sell-ph-det">
           <h1 class="p-title" style="color:#10181f"><?php echo $product_name;?></h1>
-          <p class="p-des"><a href="#"></a></p>
-                <div class="p-price">
+          <p class="p-des"><a href="#"></a></p> 
+                <div class="p-price" >
                     <label class="s-title2 "><?php echo $text_price;?></label>
                     <?php if(!$special){?>
-                        <strong ><?php echo $price;?></strong> 
+                        <strong id='price' data-price='<?php echo $raw_price;?>'><?php echo $price;?></strong> 
                     <?php } else { ?>
                         <small class="line-through"><?php echo $price;?></small>  
-                        <strong ><?php echo $special;?></strong> 
+                        <strong id='price' data-price='<?php echo $raw_special;?>'><?php echo $special;?></strong> 
                     <?php } ?>
                 </div>
 
@@ -43,7 +43,7 @@
                             <dl class="p-tr cf">
                               <?php foreach ($option['option_value'] as $option_value) { ?>
                                  <dd>
-                                    <a class="p-td" name="<?php echo $option['product_option_id']; ?>" id="<?php echo $option_value['product_option_value_id']; ?>">
+                                    <a class="p-td" data-price="<?php echo (float)($option_value['price_prefix'].((string)$option_value['raw_price']));?>" name="<?php echo $option['product_option_id']; ?>" id="<?php echo $option_value['product_option_value_id']; ?>">
                                       <i></i><?php echo $option_value['name']; ?>
                                     </a>
                                 </dd>
@@ -136,6 +136,16 @@
           var first_option = $(this).find('.p-td:first').addClass('sel');
         });
 
+        function changePrice(){
+            var _price = $('#price').data('price');
+            $('a.sel').each(function(){
+              _price+=parseFloat($(this).data('price'));
+            });
+            var currency_symblo = ($('#price').text())[0];
+            $('#price').text(currency_symblo+_price);
+        }
+
+        changePrice();
 
         var text_success = "<?php echo $text_add_success; ?>";
         var text_add_to_cart = "<?php echo $text_add_to_cart;?>";
@@ -200,6 +210,7 @@
           options.on('click',function(){
               options.removeClass('sel');
               $(this).addClass('sel');
+              changePrice();
           });
         });
 

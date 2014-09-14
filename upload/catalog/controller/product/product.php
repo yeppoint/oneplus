@@ -81,14 +81,20 @@ class ControllerProductProduct extends Controller {
 
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$this->data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				//未格式化的价格
+				$this->data['raw_price'] = (float)$this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
 			} else {
 				$this->data['price'] = false;
+				$this->data['raw_price'] = 0;
 			}
 
 			if ((float)$product_info['special']) {
 				$this->data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				//未格式化的价格
+				$this->data['raw_special'] = (float)$this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax'));
 			} else {
 				$this->data['special'] = false;
+				$this->data['raw_special'] = 0;
 			}
 			$this->data['options'] = array();
 
@@ -103,8 +109,11 @@ class ControllerProductProduct extends Controller {
 						if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
 							if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
 								$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+								//未格式化的价格
+								$raw_price = (float)$this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
 							} else {
 								$price = false;
+								$raw_price  = 0;
 							}
 
 							$option_value_data[] = array(
@@ -113,7 +122,8 @@ class ControllerProductProduct extends Controller {
 								'name'                    => $option_value['name'],
 								'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
 								'price'                   => $price,
-								'price_prefix'            => $option_value['price_prefix']
+								'price_prefix'            => $option_value['price_prefix'],
+								'raw_price'				  => $raw_price
 							);
 						}
 					}
