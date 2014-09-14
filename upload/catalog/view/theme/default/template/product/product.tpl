@@ -26,7 +26,13 @@
           <h1 class="p-title" style="color:#10181f"><?php echo $product_name;?></h1>
           <p class="p-des"><a href="#"></a></p>
                 <div class="p-price">
-                    <label class="s-title2"><?php echo $text_price;?></label><strong><?php echo $price;?></strong>
+                    <label class="s-title2 "><?php echo $text_price;?></label>
+                    <?php if(!$special){?>
+                        <strong ><?php echo $price;?></strong> 
+                    <?php } else { ?>
+                        <small class="line-through"><?php echo $price;?></small>  
+                        <strong ><?php echo $special;?></strong> 
+                    <?php } ?>
                 </div>
 
                 <!--option属性-->
